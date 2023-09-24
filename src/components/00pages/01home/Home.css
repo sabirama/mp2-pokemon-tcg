@@ -57,12 +57,14 @@
     margin-left: 30%;
   }
 
-  .button-container {
+  .home-button-container {
     display: flex;
+    justify-content: center;
   }
 
   .start-button {
-    margin-right: 0;
-    flex-wrap: nowrap;
+    position: static;
+    width: fit-content;
+    border-radius: 5px;
   }
 }
