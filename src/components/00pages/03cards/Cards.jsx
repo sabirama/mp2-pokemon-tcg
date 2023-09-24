@@ -4,7 +4,7 @@ import CardNav from "./CardNav";
 
 const Cards = () => {
   return (
-    <main>
+    <main className="cards-main">
       <CardNav />
       <Routes>
         {cardRoutes.map((route, index) => {

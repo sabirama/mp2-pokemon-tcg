@@ -1,0 +1,11 @@
+.about-main {
+  margin: auto;
+  background-image: url(../../../assets/images/background/bg-img02.jpg);
+  padding: 2rem 4rem;
+  color: rgb(219, 255, 255);
+  font-size: larger;
+}
+
+.about-main a {
+  color: rgb(127, 194, 252);
+}
