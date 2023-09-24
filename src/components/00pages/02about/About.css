@@ -1,9 +1,14 @@
 .about-main {
   margin: auto;
   background-image: url(../../../assets/images/background/bg-img02.jpg);
+  background-size: cover;
+  background-position: bottom;
   padding: 2rem 4rem;
-  color: rgb(219, 255, 255);
   font-size: larger;
+}
+
+.about-main * {
+  color: rgb(219, 255, 255);
 }
 
 .about-main a {

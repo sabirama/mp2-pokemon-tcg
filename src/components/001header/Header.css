@@ -90,6 +90,7 @@
 
   .nav-show,
   .nav-hidden {
+    background-color: transparent;
     display: flex;
     position: static;
     align-items: center;

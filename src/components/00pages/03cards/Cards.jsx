@@ -1,11 +1,13 @@
 import { Routes, Route } from "react-router-dom";
 import cardRoutes from "./subpages/cardRoutes";
-import CardNav from "./CardNav";
+import mapping from "../../methods/mapping";
+
+import "./Cards.css";
 
 const Cards = () => {
   return (
     <main className="cards-main">
-      <CardNav />
+      <div className="card-nav">{mapping(cardRoutes)}</div>;
       <Routes>
         {cardRoutes.map((route, index) => {
           return (

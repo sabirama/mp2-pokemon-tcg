@@ -1,0 +1,24 @@
+.cards-main {
+  background-image: url(../../../assets/images/background/bg-img3.jpg);
+}
+
+.link-container {
+  padding: 0 2rem;
+}
+
+.card-nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card-nav li {
+  display: flex;
+  width: 40vw;
+}
+
+.card-nav li a {
+  background-color: rebeccapurple;
+  display: flex;
+  width: 40vw;
+  justify-content: center;
+}

@@ -1,0 +1,64 @@
+.card-display {
+  display: flex;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card-item {
+  padding: 1rem;
+}
+.card-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-image {
+  width: 300px;
+  height: 400px;
+}
+
+.search-container {
+  display: flex;
+  width: 100%;
+}
+
+.search-bar {
+  width: 100%;
+}
+
+.button-container {
+  display: flex;
+  position: relative;
+  width: 100px;
+  background-color: antiquewhite;
+}
+
+.search-check-box {
+  position: absolute;
+  display: flex;
+  left: 0;
+  top: 0;
+}
+.search-button {
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.take-action-text,
+.failed-fetch-text {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  font-size: 30px;
+}
+
+.card-image:hover {
+  transform: scale(110%);
+}

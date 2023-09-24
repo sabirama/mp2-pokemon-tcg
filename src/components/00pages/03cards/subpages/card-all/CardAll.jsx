@@ -1,7 +1,8 @@
 import request from "../../../../../lib/request";
 import { useState, useEffect } from "react";
+import "./CardAll.css";
 
-const CardSet = () => {
+const CardAll = () => {
   let [page, setPage] = useState(1);
   const [cards, setCards] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -51,7 +52,7 @@ const CardSet = () => {
 
   return (
     <>
-      <div className="button-container">
+      <div className="page-button-container">
         <button className="card-nav-button-prev" onClick={previousPage}>
           PREVIOUS PAGE
         </button>
@@ -84,8 +85,8 @@ const CardSet = () => {
                     <p className="card-page-number">
                       {index + 1 + 250 * (page - 1)}
                     </p>
-
                     <p className="card-id">{card.name}</p>
+                    <p className="card-set">{card.set.name}</p>
                   </div>
                   <a href="">
                     <img
@@ -104,4 +105,4 @@ const CardSet = () => {
   );
 };
 
-export default CardSet;
+export default CardAll;

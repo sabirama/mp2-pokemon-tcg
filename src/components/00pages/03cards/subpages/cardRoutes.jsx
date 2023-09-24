@@ -5,17 +5,17 @@ import CardSet from "./card-set/CardSet";
 const cardRoutes = [
   {
     name: "CARD SEARCH",
-    path: "card-search",
+    path: "search",
     element: <CardSearch />,
   },
   {
     name: "CARD SETS",
-    path: "card-sets",
+    path: "sets",
     element: <CardSet />,
   },
   {
     name: "CARDS",
-    path: "card-all",
+    path: "all",
     element: <CardAll />,
   },
 ];
