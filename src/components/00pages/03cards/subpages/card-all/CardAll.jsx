@@ -4,9 +4,9 @@ import "./CardAll.css";
 
 const CardAll = () => {
   let [page, setPage] = useState(1);
-  const [cards, setCards] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [cardsAll, setCardsAll] = useState([]);
+  const [loadingCardAll, setLoadingCardAll] = useState(true);
+  const [errorCardAll, setErrorcardAll] = useState(null);
 
   // element on input method
   function handleChange(e) {
@@ -15,43 +15,43 @@ const CardAll = () => {
 
   //page input to fetch cards
   function handleInputClick() {
-    setLoading(true);
+    setLoadingCardAll(true);
     getCards();
   }
 
   //pagination methods
   function previousPage() {
     page == 1 ? setPage(1) : setPage((page -= 1));
-    setLoading(true);
+    setLoadingCardAll(true);
     getCards();
   }
 
   function nextPage() {
     page == 68 ? setPage(68) : setPage((page += 1));
-    setLoading(true);
+    setLoadingCardAll(true);
     getCards();
   }
 
-  useEffect(() => {}, []);
+  //fetch request
+  async function getCards() {
+    try {
+      const { data } = await request.get(`/cards?page=${page}&pageSize=250`);
+      setCardsAll(data.data);
+      setLoadingCardAll(false);
+    } catch {
+      setErrorcardAll("Error: failed fetch");
+      setLoadingCardAll(false);
+    }
+  }
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     getCards();
     return () => {};
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  //fetch request
-  async function getCards() {
-    const { data } = await request.get(`/cards?page=${page}&pageSize=250`);
-
-    try {
-      setCards(data.data);
-      setLoading(false);
-    } catch {
-      setError("Error: failed fetch");
-      setLoading(false);
-    }
-  }
 
   return (
     <>
@@ -74,16 +74,16 @@ const CardAll = () => {
         </div>
         <button className="card-nav-button-next" onClick={nextPage}></button>
       </div>
-      {loading ? (
+      {loadingCardAll ? (
         <p className="loading-text">
           Fetching data. Please wait for a little while.
         </p>
-      ) : error ? (
-        <p>Error: {error.message}</p>
-      ) : cards ? (
+      ) : errorCardAll ? (
+        <p>Error: {errorCardAll.message}</p>
+      ) : cardsAll ? (
         <div className="card-display">
           <div className="card-container">
-            {cards.map((card, index) => {
+            {cardsAll.map((card, index) => {
               return (
                 <span key={index} className="card-item">
                   <div className="card-text">

@@ -18,8 +18,9 @@ const CardSet = () => {
 
   const clickhandler = (e) => {
     setId(e.target.value);
-    console.log(id);
   };
+
+  useEffect(() => {});
 
   useEffect(() => {
     getSets();
@@ -48,8 +49,7 @@ const CardSet = () => {
           );
         })}
       </div>
-
-      <SetsPage setid={id} />
+      <SetsPage id={id} />
     </main>
   );
 };

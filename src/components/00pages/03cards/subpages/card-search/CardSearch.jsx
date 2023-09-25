@@ -29,7 +29,6 @@ const CardSearch = () => {
 
   // api fetch of cards by query
   async function getCardsByQuery() {
-    setLoading(true);
     setError(null);
     try {
       const { data } =
@@ -47,10 +46,14 @@ const CardSearch = () => {
     }
   }
 
-  useEffect(() => {});
+  useEffect(() => {}, []);
 
   useEffect(() => {
     getCardsByQuery();
+    return () => {};
+  }, []);
+
+  useEffect(() => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

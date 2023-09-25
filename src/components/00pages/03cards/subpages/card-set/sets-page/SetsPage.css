@@ -1,0 +1,39 @@
+.sets-cards-display button {
+  display: flex;
+  margin: auto;
+  padding: 1rem 2rem;
+}
+
+.sets-cards-display h1 {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.cards-display-header {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cards-display-header h1 {
+  margin: 2rem auto;
+}
+
+.cards-display-header img {
+  max-width: 50%;
+  max-height: 200px;
+  margin: auto;
+  margin: 1rem auto;
+}
+
+.sets-cards-display button {
+  background: none;
+  font-size: larger;
+  margin-top: 0.5rem;
+}
+
+.sets-cards-display button:hover {
+  background-color: blue;
+  color: white;
+}
