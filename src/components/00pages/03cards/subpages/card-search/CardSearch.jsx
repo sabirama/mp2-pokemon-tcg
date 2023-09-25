@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import request from "../../../../../lib/request";
 import CardsDisplay from "./CardsDisplay";
+import "./CardSearch.css";
 
 const CardSearch = () => {
   const [cards, setCards] = useState([]);
@@ -46,9 +47,10 @@ const CardSearch = () => {
     }
   }
 
+  useEffect(() => {});
+
   useEffect(() => {
     getCardsByQuery();
-    return () => {};
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -62,7 +64,7 @@ const CardSearch = () => {
           className="search-bar"
           placeholder="search for a card eg. pokemon names like charizard and venusaur"
         />
-        <div className="button-container">
+        <div className="search-button-container">
           <span className="search-check-box">
             <input type="checkbox" onChange={checkToggle} />
             <span className="checkbox-text"> Exact</span>

@@ -32,14 +32,14 @@
 
 .card-nav-button-prev {
   background: none;
-  height: 30px;
+  height: 50px;
   width: 10%;
   border-radius: 60% 0 0 60%;
 }
 
 .card-nav-button-next {
   background: none;
-  height: 30px;
+  height: 50px;
   width: 10%;
   border-radius: 0 60% 60% 0;
 }
@@ -53,11 +53,21 @@
   text-align: center;
   background: none;
   border: none;
+  width: 120px;
+  height: 30px;
+}
+
+.page-input-container {
+  display: flex;
+  flex-direction: column;
+  height: 50px;
+  border: 1px solid black;
 }
 
 .page-input-button {
   background: none;
-  height: 30px;
+  width: 120px;
+  height: 20px;
 }
 
 .page-number-input:focus {

@@ -27,8 +27,10 @@ function CardsDisplay(load, err, card, clickEvent, nomatchmessage) {
                 {card.map((card, index) => {
                   return (
                     <span key={index} className="card-item">
-                      <p className="card-name">{card.name}</p>
-                      <p className="set-name">{card.set.name}</p>
+                      <span className="card-detail">
+                        <p className="card-name">{card.name}</p>
+                        <p className="set-name">{card.set.name}</p>
+                      </span>
                       <Link
                         to={card.name}
                         className="card-link"

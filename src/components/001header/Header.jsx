@@ -20,7 +20,7 @@ const Header = () => {
         <button className="nav-button" onClick={toggleActive}>
           |||
         </button>
-        <ul className={isActive == true ? "nav-show" : "nav-hidden"}>
+        <ul className={isActive == true ? "nav-hidden" : "nav-show"}>
           {mainroutes.map((route, index) => {
             if (route.name == "HOME") {
               return null;

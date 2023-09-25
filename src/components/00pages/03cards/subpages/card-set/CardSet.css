@@ -1,0 +1,35 @@
+.sets-main {
+  justify-content: center;
+}
+
+.sets-display {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+}
+
+.set-symbol {
+  height: 40px;
+}
+
+.set-logo {
+  height: 100px;
+}
+
+.set-image-container {
+  padding: 1rem;
+  border: 2px solid green;
+}
+
+.set-image-container:hover {
+  background-color: gray;
+  border-radius: 5px solid gray;
+}
+.set-id {
+  background: none;
+  border: none;
+  cursor: default;
+}
+.set-id:focus {
+  outline: none;
+}

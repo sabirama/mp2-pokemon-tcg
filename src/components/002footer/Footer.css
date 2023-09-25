@@ -1,0 +1,18 @@
+.main-footer * {
+  color: white;
+}
+
+.main-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: red;
+}
+
+.links-container {
+  padding-left: 2rem;
+}
+
+.copyright {
+  padding-right: 2rem;
+}

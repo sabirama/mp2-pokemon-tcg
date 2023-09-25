@@ -13,23 +13,26 @@ const CardAll = () => {
     setPage(Number(e.target.value));
   }
 
-  function handleClick() {
+  //page input to fetch cards
+  function handleInputClick() {
     setLoading(true);
     getCards();
   }
 
   //pagination methods
-  async function previousPage() {
-    page == 1 ? setPage((page += 66)) : setPage((page -= 1));
+  function previousPage() {
+    page == 1 ? setPage(1) : setPage((page -= 1));
     setLoading(true);
     getCards();
   }
 
-  async function nextPage() {
-    page == 67 ? setPage((page -= 66)) : setPage((page += 1));
+  function nextPage() {
+    page == 68 ? setPage(68) : setPage((page += 1));
     setLoading(true);
     getCards();
   }
+
+  useEffect(() => {}, []);
 
   useEffect(() => {
     getCards();
@@ -53,21 +56,23 @@ const CardAll = () => {
   return (
     <>
       <div className="page-button-container">
-        <button className="card-nav-button-prev" onClick={previousPage}>
-          PREVIOUS PAGE
-        </button>
+        <button
+          className="card-nav-button-prev"
+          onClick={previousPage}
+        ></button>
 
-        <button onClick={handleClick} className="page-input-button">
+        <div className="page-input-container">
           <input
             type="number"
             value={page}
             className="page-number-input"
             onInput={handleChange}
           />
-        </button>
-        <button className="card-nav-button-next" onClick={nextPage}>
-          NEXT PAGE
-        </button>
+          <button onClick={handleInputClick} className="page-input-button">
+            set page
+          </button>
+        </div>
+        <button className="card-nav-button-next" onClick={nextPage}></button>
       </div>
       {loading ? (
         <p className="loading-text">
@@ -82,9 +87,7 @@ const CardAll = () => {
               return (
                 <span key={index} className="card-item">
                   <div className="card-text">
-                    <p className="card-page-number">
-                      {index + 1 + 250 * (page - 1)}
-                    </p>
+                    <p className="card-page-number">{index + 1}</p>
                     <p className="card-id">{card.name}</p>
                     <p className="card-set">{card.set.name}</p>
                   </div>

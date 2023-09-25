@@ -1,0 +1,16 @@
+.about-tcg-main {
+  margin: 3rem 4rem 0;
+}
+
+.main-ol {
+  margin-top: 1.5rem;
+}
+
+.main-li {
+  margin-top: 1rem;
+}
+
+.sub-ol {
+  margin-top: 1rem;
+  list-style: lower-alpha;
+}

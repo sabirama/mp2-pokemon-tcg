@@ -2,23 +2,25 @@
   background-image: url(../../../assets/images/background/bg-img3.jpg);
 }
 
-.link-container {
-  padding: 0 2rem;
+.cards-main .mapped-list {
+  padding: 0;
+  justify-content: space-evenly;
 }
 
-.card-nav {
-  display: flex;
-  justify-content: space-evenly;
+.link-container {
+  border: 2px solid black;
+  width: 100%;
 }
 
 .card-nav li {
   display: flex;
-  width: 40vw;
+  width: 100%;
 }
 
 .card-nav li a {
-  background-color: rebeccapurple;
+  background-color: rgb(115, 115, 255);
   display: flex;
-  width: 40vw;
   justify-content: center;
+  padding: 1rem;
+  width: 100%;
 }

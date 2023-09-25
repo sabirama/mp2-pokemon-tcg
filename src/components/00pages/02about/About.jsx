@@ -3,6 +3,7 @@ import "./About.css";
 const About = () => {
   return (
     <main className="about-main">
+      
       <h1>About Pokémon TCG</h1>
       <p>Welcome to the Pokémon Trading Card Game website!</p>
 

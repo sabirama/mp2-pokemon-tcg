@@ -7,7 +7,7 @@ import "./Cards.css";
 const Cards = () => {
   return (
     <main className="cards-main">
-      <div className="card-nav">{mapping(cardRoutes)}</div>;
+      <div className="card-nav">{mapping(cardRoutes)}</div>
       <Routes>
         {cardRoutes.map((route, index) => {
           return (

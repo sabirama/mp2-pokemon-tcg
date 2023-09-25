@@ -6,8 +6,9 @@
 }
 
 .main-home div {
-  margin-top: 100px;
-  margin-left: 200px;
+  margin: 100px 2rem;
+  padding: 2rem;
+  justify-content: center;
 }
 
 .text-container {
@@ -28,18 +29,18 @@
   color: rgb(8, 8, 177);
 }
 
-.button-container {
+.home-button-container {
+  display: flex;
   justify-content: center;
-  align-items: center;
   height: 50px;
   background-color: transparent;
 }
+
 .start-button {
   border: none;
   background-color: rgb(91, 91, 255);
   padding: 1rem;
-  margin-left: 2rem;
-
+  margin: auto;
   color: white;
 }
 
