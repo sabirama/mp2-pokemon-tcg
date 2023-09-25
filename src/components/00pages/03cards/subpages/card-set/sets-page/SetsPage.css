@@ -37,3 +37,24 @@
   background-color: blue;
   color: white;
 }
+
+.sets-loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-height: 400px;
+  margin: auto;
+  padding-bottom: 100px;
+}
+
+.sets-loading-img {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  height: auto;
+  width: 450px;
+}
+.sets-loading-text {
+  display: flex;
+  justify-content: center;
+}

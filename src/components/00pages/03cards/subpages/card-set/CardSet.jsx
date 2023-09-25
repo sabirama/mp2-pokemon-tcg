@@ -9,7 +9,7 @@ const CardSet = () => {
 
   async function getSets() {
     try {
-      const { data } = await request.get("/sets");
+      const { data } = await request.get("/sets/?orderBy=set");
       setSets(data.data);
     } catch (error) {
       null;

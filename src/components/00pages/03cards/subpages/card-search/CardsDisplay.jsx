@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import splash from "../../../../../assets/images/splash.gif";
 import "./CardDisplay.css";
 
 function CardsDisplay(load, err, card, clickEvent, nomatchmessage) {
@@ -6,8 +7,8 @@ function CardsDisplay(load, err, card, clickEvent, nomatchmessage) {
     <>
       {load ? (
         <>
+          <img src={splash} className="fetch-img" />
           <p className="fetch-text">fetching data...</p>
-          <img src="" className="fetch-img" />
         </>
       ) : err ? (
         <>

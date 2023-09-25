@@ -3,14 +3,16 @@ import { useEffect, useState } from "react";
 import request from "../../../../../../lib/request";
 import { Link } from "react-router-dom";
 import "./SetsPage.css";
+import splash from "../../../../../../assets/images/splash.gif";
 
 const SetsPage = (props) => {
   const [cards, setCards] = useState([]);
   const [setId, setSetId] = useState("ecard1");
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   async function getCards() {
+    setLoading(true);
     setError(null);
     try {
       const { data } = await request.get(`/cards/?q=set.id:${setId}`);
@@ -22,27 +24,16 @@ const SetsPage = (props) => {
     }
   }
 
-  function onClick() {
+  useEffect(() => {
     setSetId(props.id);
-    setLoading(true);
-    getCards();
-    console.log(cards);
-  }
-
-  useEffect(() => {
-    onClick();
-    return () => {};
-  }, []);
+  }, [props.id]);
 
   useEffect(() => {
     getCards();
-    return () => {};
-  }, []);
+  }, [setId]);
 
   return (
     <div className="sets-cards-display">
-      <button onClick={onClick}>View Set</button>
-
       {cards.length > 0 ? (
         <div className="cards-display-header">
           <img src={cards[0].set.images.logo} alt="" />
@@ -54,9 +45,12 @@ const SetsPage = (props) => {
 
       <div>
         {loading ? (
-          <p className="loading-text">
-            Fetching data. Please wait for a little while.
-          </p>
+          <div className="sets-loading-container">
+            <img src={splash} alt="" className="sets-loading-img" />
+            <p className="sets-loading-text">
+              Fetching data. Please wait for a little while.
+            </p>
+          </div>
         ) : error ? (
           <p>Error: {error.message}</p>
         ) : cards ? (

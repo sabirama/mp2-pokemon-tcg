@@ -1,5 +1,6 @@
 import request from "../../../../../lib/request";
 import { useState, useEffect } from "react";
+import splash from "../../../../../assets/images/splash.gif";
 import "./CardAll.css";
 
 const CardAll = () => {
@@ -7,54 +8,119 @@ const CardAll = () => {
   const [cardsAll, setCardsAll] = useState([]);
   const [loadingCardAll, setLoadingCardAll] = useState(true);
   const [errorCardAll, setErrorcardAll] = useState(null);
+  const [order, setOrder] = useState("");
+
+  function orderSetter(e) {
+    setOrder(e.target.value);
+    setLoadingCardAll(true);
+  }
 
   // element on input method
   function handleChange(e) {
     setPage(Number(e.target.value));
   }
 
-  //page input to fetch cards
-  function handleInputClick() {
-    setLoadingCardAll(true);
-    getCards();
-  }
-
   //pagination methods
   function previousPage() {
     page == 1 ? setPage(1) : setPage((page -= 1));
     setLoadingCardAll(true);
-    getCards();
   }
 
   function nextPage() {
     page == 68 ? setPage(68) : setPage((page += 1));
     setLoadingCardAll(true);
-    getCards();
   }
 
   //fetch request
   async function getCards() {
     try {
-      const { data } = await request.get(`/cards?page=${page}&pageSize=250`);
+      const { data } = await request.get(
+        `/cards/?orderBy=${order}&page=${page}&pageSize=250&`
+      );
       setCardsAll(data.data);
-      setLoadingCardAll(false);
     } catch {
       setErrorcardAll("Error: failed fetch");
-      setLoadingCardAll(false);
     }
+
+    setLoadingCardAll(false);
   }
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   useEffect(() => {
+    setErrorcardAll(null);
+    setLoadingCardAll(true);
     getCards();
-    return () => {};
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [order, page]);
 
   return (
+    // order setter
     <>
+      <div>
+        <h4 className="order-main-label">Order by {order}</h4>
+        <div className="order-radio-container">
+          <div className="radio-container">
+            <input
+              type="radio"
+              name="order-set"
+              value="number"
+              onClick={orderSetter}
+            />
+            <span>Number</span>
+          </div>
+
+          <div className="radio-container">
+            <input
+              type="radio"
+              name="order-set"
+              value="name"
+              onClick={orderSetter}
+            />
+            <span>Name</span>
+          </div>
+
+          <div className="radio-container">
+            <input
+              type="radio"
+              name="order-set"
+              value="nationalPokedexNumbers"
+              onClick={orderSetter}
+            />
+            <span>By National Pokedex Number</span>
+          </div>
+
+          <div className="radio-container">
+            <input
+              type="radio"
+              name="order-set"
+              value="set"
+              onClick={orderSetter}
+            />
+            <span>Set</span>
+          </div>
+
+          <div className="radio-container">
+            <input
+              type="radio"
+              name="order-set"
+              value="hp"
+              onClick={orderSetter}
+            />
+            <span>HP</span>
+          </div>
+
+          <div className="radio-container">
+            <input
+              type="radio"
+              name="order-set"
+              value="types"
+              onClick={orderSetter}
+            />
+            <span>Type</span>
+          </div>
+        </div>
+      </div>
+      {/* end of order setter */}
+
+      {/* paging */}
       <div className="page-button-container">
         <button
           className="card-nav-button-prev"
@@ -62,22 +128,24 @@ const CardAll = () => {
         ></button>
 
         <div className="page-input-container">
+          <p className="page-input-label">PAGE</p>
           <input
+            name="page-input"
             type="number"
             value={page}
             className="page-number-input"
             onInput={handleChange}
           />
-          <button onClick={handleInputClick} className="page-input-button">
-            set page
-          </button>
         </div>
         <button className="card-nav-button-next" onClick={nextPage}></button>
       </div>
       {loadingCardAll ? (
-        <p className="loading-text">
-          Fetching data. Please wait for a little while.
-        </p>
+        <div className="cardsall-loading-container">
+          <img src={splash} alt="" />
+          <p className="cardsall-loading-text">
+            Fetching data. Please wait for a little while.
+          </p>
+        </div>
       ) : errorCardAll ? (
         <p>Error: {errorCardAll.message}</p>
       ) : cardsAll ? (

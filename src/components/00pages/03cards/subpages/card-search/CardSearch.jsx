@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import request from "../../../../../lib/request";
 import CardsDisplay from "./CardsDisplay";
 import "./CardSearch.css";
@@ -7,7 +7,7 @@ const CardSearch = () => {
   const [cards, setCards] = useState([]);
   const [exact, setExact] = useState(true);
   const [searchValue, setSearchValue] = useState("");
-  const params = `/?q=${!exact ? "!" : ""}name:${searchValue}`;
+  const params = `/?q=${!exact ? "!" : ""}name:"${searchValue}"`;
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const message = "No results were found for search.";
@@ -39,23 +39,12 @@ const CardSearch = () => {
             );
 
       setCards(data.data);
-      setLoading(false);
     } catch (error) {
       setError("Error: failed fetch");
-      setLoading(false);
     }
+
+    setLoading(false);
   }
-
-  useEffect(() => {}, []);
-
-  useEffect(() => {
-    getCardsByQuery();
-    return () => {};
-  }, []);
-
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   return (
     <>

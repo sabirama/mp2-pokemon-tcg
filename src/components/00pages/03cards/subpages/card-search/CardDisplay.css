@@ -36,3 +36,10 @@
 .card-image:hover {
   transform: scale(110%);
 }
+
+.fetch-text,
+.fetch-img {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
