@@ -5,33 +5,30 @@
   padding-top: 100px;
 }
 
-.main-home div {
-  margin: 100px 2rem;
+.main-home .text-container {
+  margin: auto;
   padding: 2rem;
   justify-content: center;
-}
-
-.text-container {
   background-color: rgba(255, 255, 255, 0.514);
 }
 
 .main-home div h1 {
   display: flex;
   justify-content: center;
-  margin-left: 0px;
+  margin: auto;
   color: rgb(8, 8, 177);
 }
 
-.main-home div p {
+.main-home .text-container p {
   display: flex;
-  margin-right: 2rem;
-  margin-left: 0;
+  margin: 3rem auto;
   color: rgb(8, 8, 177);
 }
 
 .home-button-container {
   display: flex;
   justify-content: center;
+  margin: 100px auto;
   height: 50px;
   background-color: transparent;
 }
@@ -50,22 +47,26 @@
 }
 
 @media screen and (min-width: 769px) {
-  .main-home div {
-    margin-left: 30%;
+  .main-home .text-container {
+    margin: 100px 2rem 100px auto;
+    width: 60%;
   }
 
-  .main-home div p {
-    margin-left: 30%;
+  .main-home .text-container p {
+    margin: 3rem auto;
   }
 
   .home-button-container {
     display: flex;
+    margin: 100px 2rem 100px auto;
     justify-content: center;
+    width: 60%;
   }
 
   .start-button {
     position: static;
     width: fit-content;
     border-radius: 5px;
+    margin: auto;
   }
 }

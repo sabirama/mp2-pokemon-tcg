@@ -1,6 +1,6 @@
-import "./AboutPokemonTcg.css";
+import "./HowToPlay.css";
 
-const AboutPokemonTcg = () => {
+const HowToPlay = () => {
   return (
     <main className="about-tcg-main">
       <article>
@@ -80,4 +80,4 @@ const AboutPokemonTcg = () => {
   );
 };
 
-export default AboutPokemonTcg;
+export default HowToPlay;

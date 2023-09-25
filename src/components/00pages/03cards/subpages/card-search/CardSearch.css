@@ -47,8 +47,6 @@
     justify-content: center;
     width: 60%;
     margin: auto;
-  }
-
-  search-check-box {
+    margin-top: 1rem;
   }
 }

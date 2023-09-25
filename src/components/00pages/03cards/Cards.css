@@ -18,9 +18,8 @@
 }
 
 .card-nav li a {
-  background-color: rgb(115, 115, 255);
   display: flex;
   justify-content: center;
-  padding: 1rem;
   width: 100%;
+  height: auto;
 }

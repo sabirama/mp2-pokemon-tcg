@@ -1,7 +1,6 @@
 import Home from "./01home/Home";
-import About from "./02about/About";
+import PokemonTCG from "./02pokemon-tcg/PokemonTCG";
 import Cards from "./03cards/Cards";
-import AboutPokemonTcg from "./04aboutPokemonTCG/AboutPokemonTcg";
 
 const mainroutes = [
   {
@@ -10,19 +9,14 @@ const mainroutes = [
     element: <Home />,
   },
   {
-    name: "ABOUT",
-    path: "/about",
-    element: <About />,
+    name: "PokemonTCG",
+    path: "pokemon-tcg/*",
+    element: <PokemonTCG />,
   },
   {
     name: "CARDS",
-    path: "/cards/*",
+    path: "cards/*",
     element: <Cards />,
-  },
-  {
-    name: "TCG",
-    path: "/tcg",
-    element: <AboutPokemonTcg />,
   },
 ];
 

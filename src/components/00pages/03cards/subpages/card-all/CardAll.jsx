@@ -76,7 +76,7 @@ const CardAll = () => {
       </div>
       {loading ? (
         <p className="loading-text">
-          Loading data. Please wait for a little while.
+          Fetching data. Please wait for a little while.
         </p>
       ) : error ? (
         <p>Error: {error.message}</p>

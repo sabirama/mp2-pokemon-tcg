@@ -3,3 +3,7 @@
   padding: 0 2rem;
   margin: 0;
 }
+
+.mapped-list li a {
+  background-color: rgb(115, 115, 255);
+}

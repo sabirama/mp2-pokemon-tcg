@@ -5,7 +5,7 @@ import CardSet from "./card-set/CardSet";
 const cardRoutes = [
   {
     name: "CARD SEARCH",
-    path: "search",
+    path: "*",
     element: <CardSearch />,
   },
   {

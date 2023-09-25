@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import request from "../../../../../../lib/request";
 
-const SetsPage = () => {
+const SetsPage = (props) => {
   const [val, setVal] = useState("");
   const [cards, setCards] = useState([]);
 
@@ -15,7 +15,7 @@ const SetsPage = () => {
   }
 
   function clickHandler() {
-    setVal("test");
+    setVal(props.id);
   }
 
   useEffect(() => {}, []);

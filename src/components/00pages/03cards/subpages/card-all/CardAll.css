@@ -21,6 +21,10 @@
   height: 400px;
 }
 
+.card-image:hover {
+  transform: scale(110%);
+}
+
 .page-button-container {
   display: flex;
   width: 100%;
@@ -28,20 +32,25 @@
   align-items: center;
   justify-content: center;
   margin: 1rem 0;
+  position: relative;
 }
 
 .card-nav-button-prev {
   background: none;
   height: 50px;
-  width: 10%;
+  width: 4%;
   border-radius: 60% 0 0 60%;
+  position: absolute;
+  left: 2rem;
 }
 
 .card-nav-button-next {
   background: none;
   height: 50px;
-  width: 10%;
+  width: 4%;
   border-radius: 0 60% 60% 0;
+  position: absolute;
+  right: 2rem;
 }
 
 .card-nav-button-next:hover,
@@ -78,4 +87,11 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.loading-text {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 200px;
 }
