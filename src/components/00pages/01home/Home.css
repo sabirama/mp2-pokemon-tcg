@@ -1,15 +1,17 @@
 .main-home {
   background-image: url(../../../assets/images/background/bg-img01.jpg);
+  background-position: top;
   background-size: cover;
-  background-position-x: center;
-  padding-top: 100px;
+  background-position: left;
 }
 
 .main-home .text-container {
-  margin: auto;
   padding: 2rem;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.514);
+  box-shadow: 0px 0px 4px gray;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.75);
+  margin-top: 5rem;
 }
 
 .main-home div h1 {
@@ -21,14 +23,13 @@
 
 .main-home .text-container p {
   display: flex;
+  justify-content: center;
   margin: 3rem auto;
   color: rgb(8, 8, 177);
 }
-
 .home-button-container {
   display: flex;
   justify-content: center;
-  margin: 100px auto;
   height: 50px;
   background-color: transparent;
 }
@@ -47,26 +48,32 @@
 }
 
 @media screen and (min-width: 769px) {
+  .main-home {
+    padding-top: 100px;
+  }
+
   .main-home .text-container {
-    margin: 100px 2rem 100px auto;
-    width: 60%;
+    position: static;
+    margin: 0 2rem 100px auto;
+    width: 40%;
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+
+  .text-container h1 {
+    text-align: center;
+    font-size: 4rem;
   }
 
   .main-home .text-container p {
+    text-align: center;
     margin: 3rem auto;
-  }
-
-  .home-button-container {
-    display: flex;
-    margin: 100px 2rem 100px auto;
-    justify-content: center;
-    width: 60%;
+    font-size: 2rem;
   }
 
   .start-button {
-    position: static;
     width: fit-content;
     border-radius: 5px;
     margin: auto;
+    z-index: 3;
   }
 }

@@ -10,12 +10,12 @@ const Home = () => {
           Unleash your inner trainer and become a Pokémon TCG master, come and
           explore the world of Pokemon TCG!
         </p>
-      </div>
 
-      <div className="home-button-container">
-        <Link to="cards" className="start-button">
-          Get Started
-        </Link>
+        <div className="home-button-container">
+          <Link to="cards" className="start-button">
+            Get Started
+          </Link>
+        </div>
       </div>
     </main>
   );

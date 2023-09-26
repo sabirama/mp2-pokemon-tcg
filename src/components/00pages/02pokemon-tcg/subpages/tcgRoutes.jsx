@@ -1,17 +1,17 @@
 import AboutPokemonTCG from "./about-pokemon-tcg/AboutPokemonTCG";
+import About from "./about/About";
 import HowToPlay from "./how-to-play/HowToPlay";
-import TCGAboutIndex from "./tcg-about-index/TCGAboutIndex";
 
 const tcgRoutes = [
   {
-    name: "TCG About",
+    name: "Pokemon TCG",
     path: "*",
-    element: <TCGAboutIndex />,
+    element: <AboutPokemonTCG />,
   },
   {
-    name: "Pokemon TCG",
-    path: "tcg",
-    element: <AboutPokemonTCG />,
+    name: "About",
+    path: "about",
+    element: <About />,
   },
   {
     name: "How to play",

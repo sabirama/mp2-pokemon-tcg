@@ -7,7 +7,7 @@ import splash from "../../../../../../assets/images/splash.gif";
 
 const SetsPage = (props) => {
   const [cards, setCards] = useState([]);
-  const [setId, setSetId] = useState("ecard1");
+  const [setId, setSetId] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -37,7 +37,6 @@ const SetsPage = (props) => {
       {cards.length > 0 ? (
         <div className="cards-display-header">
           <img src={cards[0].set.images.logo} alt="" />
-          <h1>{cards[0].set.name}</h1>
         </div>
       ) : (
         <h1>Select a set</h1>
@@ -52,7 +51,11 @@ const SetsPage = (props) => {
             </p>
           </div>
         ) : error ? (
-          <p>Error: {error.message}</p>
+          cards.length == 0 ? (
+            ""
+          ) : (
+            <p>Error: {error.message}</p>
+          )
         ) : cards ? (
           <div className="card-display">
             <div className="card-container">

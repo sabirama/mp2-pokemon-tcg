@@ -1,35 +1,58 @@
-.about-main {
-  margin: auto;
-  background-image: url(../../../../../assets/images/background/bg-img02.jpg);
-  background-size: cover;
-  background-position: bottom;
-  font-size: larger;
-}
-
-.main-overlay {
-  background-color: rgba(0, 0, 0, 0.2);
-  padding: 2rem 0;
-  width: 100%;
-}
-
-.about-main * {
-  color: rgb(219, 255, 255);
-  margin-top: 0.5rem;
+.tcg-about-main {
   text-align: center;
 }
 
-.about-main h1 {
-  margin: 2rem auto;
+.tcg-main div {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  height: 50%;
+  padding: 5rem;
 }
 
-.about-main h2 {
-  margin: 1.5rem auto;
+.tcg-about-main h1 {
+  margin: auto;
+  padding: 2rem 0;
 }
 
-.about-main p {
-  margin: 0 5rem;
+.tcg-about-img {
+  padding-top: 2rem;
+  padding: 5rem;
+  margin: auto;
+  max-height: 500px;
+  max-width: 500px;
 }
 
-.about-main a {
-  color: rgb(127, 194, 252);
+.tcg-main .link-container {
+  display: flex;
+  max-width: 250px;
+  margin: 0.5rem;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.link-container a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  padding: 1rem 0;
+  color: white;
+  border-radius: 1rem;
+}
+
+.link-container a:hover {
+  background-color: gray;
+}
+
+@media screen and (min-width: 769px) {
+  .tcg-about-main {
+    display: flex;
+    padding: 2rem;
+  }
+
+  .tcg-about-img {
+    width: 500px;
+  }
 }

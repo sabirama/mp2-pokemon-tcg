@@ -6,8 +6,7 @@
   .main-header {
     justify-content: space-between;
     position: relative;
-    background-color: red;
-    padding-bottom: 100px;
+    background-color: rrgb(250, 122, 122);
   }
 
   .logo {
@@ -18,7 +17,7 @@
     position: fixed;
     top: 0;
     z-index: 2;
-    background-color: red;
+    background-color: rgb(247, 44, 44);
   }
 
   .logo:hover {
@@ -53,7 +52,7 @@
     top: -1rem;
     padding-top: 100px;
     right: 0;
-    color: red;
+    color: rgb(247, 44, 44);
     background-color: aliceblue;
     transition-duration: 2s;
 
@@ -78,16 +77,16 @@
 
   .nav-show li a {
     display: flex;
-    justify-content: center;
     width: 100%;
     margin: auto;
     padding: 1rem 0;
+    justify-content: center;
   }
 }
 
 @media screen and (min-width: 768px) {
   .main-header {
-    background-color: red;
+    background-color: rgb(247, 44, 44);
     justify-content: space-between;
     position: static;
     display: flex;
@@ -141,6 +140,7 @@
     padding: 0 2rem;
     height: 95%;
     border: 2px solid black;
+    color: white;
   }
 
   .logo:hover,

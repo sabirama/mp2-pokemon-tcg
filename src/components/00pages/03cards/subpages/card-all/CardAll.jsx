@@ -4,15 +4,15 @@ import splash from "../../../../../assets/images/splash.gif";
 import "./CardAll.css";
 
 const CardAll = () => {
-  let [page, setPage] = useState(1);
-  const [cardsAll, setCardsAll] = useState([]);
-  const [loadingCardAll, setLoadingCardAll] = useState(true);
-  const [errorCardAll, setErrorcardAll] = useState(null);
+  const [page, setPage] = useState(1);
+  const [cards, setCardsAll] = useState([]);
+  const [loading, setLoadingCardAll] = useState(true);
+  const [error, setErrorcardAll] = useState(null);
   const [order, setOrder] = useState("");
 
   function orderSetter(e) {
     setOrder(e.target.value);
-    setLoadingCardAll(true);
+    setPage(1);
   }
 
   // element on input method
@@ -22,13 +22,11 @@ const CardAll = () => {
 
   //pagination methods
   function previousPage() {
-    page == 1 ? setPage(1) : setPage((page -= 1));
-    setLoadingCardAll(true);
+    page == 1 ? setPage(1) : setPage(page - 1);
   }
 
   function nextPage() {
-    page == 68 ? setPage(68) : setPage((page += 1));
-    setLoadingCardAll(true);
+    page == 68 ? setPage(68) : setPage(page + 1);
   }
 
   //fetch request
@@ -54,70 +52,69 @@ const CardAll = () => {
   return (
     // order setter
     <>
-      <div>
-        <h4 className="order-main-label">Order by {order}</h4>
-        <div className="order-radio-container">
-          <div className="radio-container">
-            <input
-              type="radio"
-              name="order-set"
-              value="number"
-              onClick={orderSetter}
-            />
-            <span>Number</span>
-          </div>
+      <h4 className="order-main-label">Order by {order}</h4>
+      <div className="order-radio-container">
+        <div className="radio-container">
+          <input
+            type="radio"
+            name="order-set"
+            value="number"
+            onClick={orderSetter}
+          />
+          <span>Number</span>
+        </div>
 
-          <div className="radio-container">
-            <input
-              type="radio"
-              name="order-set"
-              value="name"
-              onClick={orderSetter}
-            />
-            <span>Name</span>
-          </div>
+        <div className="radio-container">
+          <input
+            type="radio"
+            name="order-set"
+            value="name"
+            onClick={orderSetter}
+          />
+          <span>Name</span>
+        </div>
 
-          <div className="radio-container">
-            <input
-              type="radio"
-              name="order-set"
-              value="nationalPokedexNumbers"
-              onClick={orderSetter}
-            />
-            <span>By National Pokedex Number</span>
-          </div>
+        <div className="radio-container">
+          <input
+            type="radio"
+            name="order-set"
+            value="nationalPokedexNumbers"
+            onClick={orderSetter}
+          />
+          <span>By National Pokedex Number</span>
+        </div>
 
-          <div className="radio-container">
-            <input
-              type="radio"
-              name="order-set"
-              value="set"
-              onClick={orderSetter}
-            />
-            <span>Set</span>
-          </div>
+        <div className="radio-container">
+          <input
+            type="radio"
+            name="order-set"
+            value="set"
+            onClick={orderSetter}
+          />
+          <span>Set</span>
+        </div>
 
-          <div className="radio-container">
-            <input
-              type="radio"
-              name="order-set"
-              value="hp"
-              onClick={orderSetter}
-            />
-            <span>HP</span>
-          </div>
+        <div className="radio-container">
+          <input
+            type="radio"
+            name="order-set"
+            value="hp"
+            onClick={orderSetter}
+          />
+          <span>HP</span>
+        </div>
 
-          <div className="radio-container">
-            <input
-              type="radio"
-              name="order-set"
-              value="types"
-              onClick={orderSetter}
-            />
-            <span>Type</span>
-          </div>
+        <div className="radio-container">
+          <input
+            type="radio"
+            name="order-set"
+            value="types"
+            onClick={orderSetter}
+          />
+          <span>Type</span>
         </div>
       </div>
+
       {/* end of order setter */}
 
       {/* paging */}
@@ -139,19 +136,19 @@ const CardAll = () => {
         </div>
         <button className="card-nav-button-next" onClick={nextPage}></button>
       </div>
-      {loadingCardAll ? (
+      {loading ? (
         <div className="cardsall-loading-container">
           <img src={splash} alt="" />
           <p className="cardsall-loading-text">
             Fetching data. Please wait for a little while.
           </p>
         </div>
-      ) : errorCardAll ? (
-        <p>Error: {errorCardAll.message}</p>
-      ) : cardsAll ? (
+      ) : error ? (
+        <p>Error: {error.message}</p>
+      ) : cards ? (
         <div className="card-display">
           <div className="card-container">
-            {cardsAll.map((card, index) => {
+            {cards.map((card, index) => {
               return (
                 <span key={index} className="card-item">
                   <div className="card-text">
@@ -159,13 +156,13 @@ const CardAll = () => {
                     <p className="card-id">{card.name}</p>
                     <p className="card-set">{card.set.name}</p>
                   </div>
-                  <a href="">
+                  <link to="">
                     <img
                       src={card.images.small}
                       alt=""
                       className="card-image"
                     />
-                  </a>
+                  </link>
                 </span>
               );
             })}

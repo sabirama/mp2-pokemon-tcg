@@ -1,15 +1,4 @@
 main {
   margin: auto;
-  align-items: center;
-  min-height: 700px;
-}
-
-.card-image {
-  width: 300px;
-  height: 400px;
-}
-
-.card-image:hover {
-  transform: scale(110%);
-  box-shadow: 0 0 2px 4px gold;
+  min-height: 750px;
 }

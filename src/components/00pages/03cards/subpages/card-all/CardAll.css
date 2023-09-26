@@ -100,11 +100,23 @@ input::-webkit-inner-spin-button {
   justify-content: center;
 }
 
+.order-main-label {
+  padding: 1rem 0 0 1rem;
+  text-align: center;
+}
+
 .order-radio-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem;
 }
 
 .radio-container {
   display: flex;
-  padding: 1rem;
+  padding-left: 1rem;
+  width: 160px;
+  height: 44px;
+  align-items: center;
+  border: 2px solid rgb(46, 34, 34);
 }

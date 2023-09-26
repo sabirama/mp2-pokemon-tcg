@@ -20,21 +20,12 @@
   justify-content: space-between;
 }
 
-.card-image {
-  width: 300px;
-  height: 400px;
-}
-
 .take-action-text,
 .failed-fetch-text {
   display: flex;
   justify-content: center;
   margin-top: 100px;
   font-size: 30px;
-}
-
-.card-image:hover {
-  transform: scale(110%);
 }
 
 .fetch-text,

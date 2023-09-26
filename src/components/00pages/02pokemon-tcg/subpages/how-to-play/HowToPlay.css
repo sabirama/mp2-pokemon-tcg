@@ -1,6 +1,10 @@
 .about-tcg-main {
-  margin: 3rem 4rem 0;
+  margin: 0 4rem;
   padding: 2rem;
+}
+
+.about-tcg-main * {
+  color: black;
 }
 
 .main-ol {

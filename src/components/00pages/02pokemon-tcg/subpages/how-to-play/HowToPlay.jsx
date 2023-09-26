@@ -8,7 +8,6 @@ const HowToPlay = () => {
           <h1>
             Beginner`s Guide to Playing the Pokémon Trading Card Game (TCG)
           </h1>
-          <p> Introduction:</p>
           <p>
             The Pokémon Trading Card Game (TCG) is a popular collectible card
             game that allows players to build decks, battle against opponents,
@@ -19,7 +18,6 @@ const HowToPlay = () => {
         </div>
 
         <ol className="main-ol">
-          <p>Table of Contents:</p>
           <li className="main-li">
             Understanding the Basics
             <ol className="sub-ol">
@@ -58,7 +56,7 @@ const HowToPlay = () => {
             </ol>
           </li>
 
-          <li>
+          <li className="main-li">
             Tournaments and Events
             <ol className="sub-ol">
               <li>Local Tournaments</li>
