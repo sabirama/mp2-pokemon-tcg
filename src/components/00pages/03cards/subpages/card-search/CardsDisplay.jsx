@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
 import splash from "../../../../../assets/images/splash.gif";
+import { Button } from "react-bootstrap";
 import "./CardDisplay.css";
 
-function CardsDisplay(load, err, card, clickEvent, nomatchmessage) {
+function CardsDisplay(load, err, card, handleShow) {
   return (
     <>
       {load ? (
@@ -19,7 +19,7 @@ function CardsDisplay(load, err, card, clickEvent, nomatchmessage) {
         </>
       ) : card ? (
         card.length == 0 ? (
-          <p className="take-action-text">{nomatchmessage}</p>
+          <p className="take-action-text">No card matches search.</p>
         ) : (
           <>
             <p>{card.length} items in this page</p>
@@ -32,17 +32,17 @@ function CardsDisplay(load, err, card, clickEvent, nomatchmessage) {
                         <p className="card-name">{card.name}</p>
                         <p className="set-name">{card.set.name}</p>
                       </span>
-                      <Link
-                        to={card.name}
-                        className="card-link"
-                        onClick={clickEvent}
-                      >
-                        <img
-                          src={card.images ? card.images.small : ""}
-                          alt=""
-                          className="card-image"
-                        />
-                      </Link>
+
+                      <div className="individual-card-container">
+                        <img src={card.images.small} className="card-image" />
+                        <Button
+                          variant="primary"
+                          onClick={handleShow}
+                          value={card.id}
+                        >
+                          Card Details
+                        </Button>
+                      </div>
                     </span>
                   );
                 })}

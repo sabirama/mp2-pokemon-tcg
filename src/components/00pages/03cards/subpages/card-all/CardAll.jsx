@@ -1,6 +1,8 @@
 import request from "../../../../../lib/request";
 import { useState, useEffect } from "react";
 import splash from "../../../../../assets/images/splash.gif";
+import CardIndividual from "../CardIndividual";
+import { Button } from "react-bootstrap";
 import "./CardAll.css";
 
 const CardAll = () => {
@@ -9,6 +11,16 @@ const CardAll = () => {
   const [loading, setLoadingCardAll] = useState(true);
   const [error, setErrorcardAll] = useState(null);
   const [order, setOrder] = useState("");
+  const [toShow, setToShow] = useState(0);
+  const [fullscreen, setFullscreen] = useState(true);
+  const [show, setShow] = useState(false);
+
+  // fullscreen modal
+  const handleShow = (e) => {
+    setFullscreen(true);
+    setToShow(e.target.value);
+    setShow(true);
+  };
 
   function orderSetter(e) {
     setOrder(e.target.value);
@@ -156,17 +168,27 @@ const CardAll = () => {
                     <p className="card-id">{card.name}</p>
                     <p className="card-set">{card.set.name}</p>
                   </div>
-                  <link to="">
-                    <img
-                      src={card.images.small}
-                      alt=""
-                      className="card-image"
-                    />
-                  </link>
+                  <div className="individual-card-container">
+                    <img src={card.images.small} className="card-image" />
+                    <Button
+                      variant="primary"
+                      onClick={handleShow}
+                      value={card.id}
+                    >
+                      Card Details
+                    </Button>
+                  </div>
                 </span>
               );
             })}
           </div>
+          <CardIndividual
+            show={show}
+            setShow={setShow}
+            toShow={toShow}
+            fullscreen={fullscreen}
+          />
+          ;
         </div>
       ) : null}
     </>

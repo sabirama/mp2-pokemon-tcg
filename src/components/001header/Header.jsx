@@ -28,6 +28,7 @@ const Header = () => {
             return (
               <li key={index}>
                 <Link to={route.path} className="links">
+                  <img src={route.icon} alt="" height="40px" />
                   {route.name}
                 </Link>
               </li>

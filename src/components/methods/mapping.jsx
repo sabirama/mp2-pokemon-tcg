@@ -10,7 +10,10 @@ const mapping = (item, excempt) => {
         } else
           return (
             <li key={index} className="link-container">
-              <Link to={item.path}>{item.name}</Link>
+              <Link to={item.path}>
+                <img src={item.icon} alt="" height="30px" />
+                {item.name}
+              </Link>
             </li>
           );
       })}

@@ -1,30 +1,33 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import request from "../../../../../lib/request";
 import CardsDisplay from "./CardsDisplay";
+import CardIndividual from "../CardIndividual";
 import "./CardSearch.css";
 
 const CardSearch = () => {
   const [cards, setCards] = useState([]);
-  const [exact, setExact] = useState(true);
   const [searchValue, setSearchValue] = useState("");
-  const params = `/?q=${!exact ? "!" : ""}name:"${searchValue}"`;
+  const [params, setParams] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const message = "No results were found for search.";
+  const [toShow, setToShow] = useState(0);
+  const [fullscreen, setFullscreen] = useState(true);
+  const [show, setShow] = useState(false);
+
+  // fullscreen modal
+  const handleShow = (e) => {
+    setFullscreen(true);
+    setToShow(e.target.value);
+    setShow(true);
+  };
 
   // search nput value
   function newValue(e) {
     setSearchValue(e.target.value);
   }
 
-  // card exact search toggle
-  function checkToggle() {
-    setExact(!exact);
-  }
-
   function onClickHandler() {
-    setLoading(true);
-    getCardsByQuery();
+    setParams(searchValue);
   }
 
   // api fetch of cards by query
@@ -35,16 +38,21 @@ const CardSearch = () => {
         searchValue == ""
           ? null
           : await request.get(
-              `/cards${!setSearchValue.length == 0 ? params : ""}`
+              `/cards${
+                !setSearchValue.length == 0 ? `/?q=name:"*${params}*"` : ""
+              }`
             );
 
       setCards(data.data);
     } catch (error) {
       setError("Error: failed fetch");
     }
-
     setLoading(false);
   }
+  useEffect(() => {
+    setLoading(true);
+    getCardsByQuery();
+  }, [params]);
 
   return (
     <>
@@ -57,10 +65,6 @@ const CardSearch = () => {
           placeholder="search for a card eg. pokemon names like charizard and venusaur"
         />
         <div className="search-button-container">
-          <span className="search-check-box">
-            <input type="checkbox" onChange={checkToggle} />
-            <span className="checkbox-text"> Exact</span>
-          </span>
           <button onClick={onClickHandler} className="search-button">
             Search
           </button>
@@ -70,8 +74,15 @@ const CardSearch = () => {
       {searchValue == "" ? (
         <p className="take-action-text">Please search a Card.</p>
       ) : (
-        CardsDisplay(loading, error, cards, null, message)
+        CardsDisplay(loading, error, cards, handleShow)
       )}
+
+      <CardIndividual
+        show={show}
+        setShow={setShow}
+        toShow={toShow}
+        fullscreen={fullscreen}
+      />
     </>
   );
 };

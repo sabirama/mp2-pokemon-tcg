@@ -1,15 +1,25 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import request from "../../../../../../lib/request";
-import { Link } from "react-router-dom";
-import "./SetsPage.css";
+import { Button } from "react-bootstrap";
+import CardIndividual from "../../CardIndividual";
 import splash from "../../../../../../assets/images/splash.gif";
+import "./SetsPage.css";
 
 const SetsPage = (props) => {
   const [cards, setCards] = useState([]);
   const [setId, setSetId] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [toShow, setToShow] = useState(0);
+  const [fullscreen, setFullscreen] = useState(true);
+  const [show, setShow] = useState(false);
+
+  const handleShow = (e) => {
+    setFullscreen(true);
+    setToShow(e.target.value);
+    setShow(true);
+  };
 
   async function getCards() {
     setLoading(true);
@@ -66,13 +76,16 @@ const SetsPage = (props) => {
                       <p className="card-page-number">{index + 1}</p>
                       <p className="card-id">{card.name}</p>
                     </div>
-                    <Link to="">
-                      <img
-                        src={card.images.small}
-                        alt=""
-                        className="card-image"
-                      />
-                    </Link>
+                    <div className="individual-card-container">
+                      <img src={card.images.small} className="card-image" />
+                      <Button
+                        variant="primary"
+                        onClick={handleShow}
+                        value={card.id}
+                      >
+                        Card Details
+                      </Button>
+                    </div>
                   </span>
                 );
               })}
@@ -80,6 +93,13 @@ const SetsPage = (props) => {
           </div>
         ) : null}
       </div>
+
+      <CardIndividual
+        show={show}
+        setShow={setShow}
+        toShow={toShow}
+        fullscreen={fullscreen}
+      />
     </div>
   );
 };
