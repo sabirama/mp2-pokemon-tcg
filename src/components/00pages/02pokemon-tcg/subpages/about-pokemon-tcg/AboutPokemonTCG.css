@@ -1,66 +1,72 @@
 .tcg-about-main {
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .tcg-main div {
-  display: flex;
-  margin: auto;
-  flex-direction: column;
-  align-items: center;
-  height: 50%;
-  padding: 5rem;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    height: 50%;
 }
 
 .tcg-main div .mapped-list {
-  flex-direction: column;
+    flex-direction: column;
 }
 
 .tcg-about-main h1 {
-  margin: auto;
-  padding: 2rem 0;
+    margin: auto;
+    padding: 2rem 0;
 }
 
 .tcg-about-img {
-  padding-top: 2rem;
-  padding: 5rem;
-  margin: auto;
-  max-height: 500px;
-  max-width: 500px;
+    padding: 2rem 0;
+    margin: 2rem auto 0;
+    max-height: 500px;
+    max-width: 500px;
+    min-width: 200px;
 }
 
 .tcg-main .link-container {
-  display: flex;
-  width: 200px;
-  margin: 0.5rem;
-  height: 100%;
-  border-radius: 1rem;
+    display: flex;
+    width: 200px;
+    margin: 0.5rem;
+    height: 100%;
+    border-radius: 1rem;
 }
 
 .link-container a {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  padding: 1rem 0;
-  color: white;
-  border-radius: 1rem;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    padding: 1rem 0;
+    color: white;
+    border-radius: 1rem;
 }
 
 .link-container a:hover {
-  background-color: gray;
+    background-color: gray;
 }
 
 @media screen and (min-width: 769px) {
-  .tcg-about-main {
-    display: flex;
-    padding: 2rem;
-  }
+    .tcg-about-main {
+        flex-direction: row;
+    }
 
-  .tcg-main div .mapped-list {
-    flex-direction: row;
-  }
+    .tcg-about-main h1 {
+        display: flex;
+        margin: auto;
+    }
 
-  .tcg-about-img {
-    width: 500px;
-  }
+    .tcg-main div .mapped-list {
+        flex-direction: row;
+    }
+
+    .tcg-about-img {
+        margin: auto;
+        width: 50%;
+    }
 }

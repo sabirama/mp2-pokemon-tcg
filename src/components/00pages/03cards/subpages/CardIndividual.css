@@ -1,3 +1,14 @@
 .card-individual-modal {
-  width: 100%;
+    width: 100%;
+}
+
+.card-individual-img {
+    width: 85vw;
+}
+
+@media screen and (min-width: 769px) {
+    .card-individual-img {
+        width: auto;
+        padding: 0 4rem;
+    }
 }

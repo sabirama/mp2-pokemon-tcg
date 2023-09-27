@@ -1,64 +1,100 @@
 .cards-main {
-  background-image: url(../../../assets/images/background/bg-img03.jpg);
-  padding-top: 40px;
+    background-image: url(../../../assets/images/background/bg-img03.jpg);
+    padding-top: 40px;
 }
 
 .cards-main .mapped-list {
-  padding: 0;
-  justify-content: space-evenly;
+    padding: 0;
+    justify-content: space-evenly;
+}
+
+.loading-img {
+    display: flex;
+    width: 200px;
+    justify-content: center;
+    margin: auto;
 }
 
 .link-container {
-  border: 2px solid black;
-  width: 100%;
+    border: 2px solid black;
+    width: 100%;
 }
 
 .card-nav li {
-  display: flex;
-  width: 100%;
+    display: flex;
+    width: 100%;
 }
 
 .card-nav li a {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: auto;
-  border-radius: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
 }
 
 .card-image {
-  width: 300px;
-  height: 400px;
+    width: auto;
 }
 
 .card-image:hover {
-  border-radius: 20px;
-  transform: scale(110%);
-  animation: hovercard 4s infinite;
+    border-radius: 20px;
+    transform: scale(110%);
+    animation: hovercard 4s infinite;
 }
 
 .individual-card-container {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    width: 245px;
+    height: 345px;
+}
+
+.card-item {
+    padding: 1rem;
+    width: 260px;
+    height: 450px;
+}
+
+.card-text {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.card-set {
+    text-align: right;
+}
+
+.card-name {
+    text-align: center;
+}
+
+.card-page-number {
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid black;
 }
 
 @keyframes hovercard {
-  0% {
-    box-shadow: 0 0 1px 8px rgba(255, 217, 0, 0.5);
-    transform: translateX(-20px);
-  }
-  50% {
-    box-shadow: 0 0 1px 20px rgb(247, 241, 207, 0.2);
-    transform: translateX(20px);
-  }
-  100% {
-    box-shadow: 0 0 1px 8px rgba(255, 217, 0, 0.5);
-    transform: translateX(-20px);
-  }
+    0% {
+        box-shadow: 0 0 1px 8px rgba(255, 217, 0, 0.5);
+        transform: translateX(-20px);
+    }
+    50% {
+        box-shadow: 0 0 1px 20px rgb(247, 241, 207, 0.2);
+        transform: translateX(20px);
+    }
+    100% {
+        box-shadow: 0 0 1px 8px rgba(255, 217, 0, 0.5);
+        transform: translateX(-20px);
+    }
 }
 
 @media screen and (min-width: 769px) {
-  .cards-main {
-    padding-top: 0;
-  }
+    .cards-main {
+        padding-top: 0;
+    }
 }
