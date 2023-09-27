@@ -1,0 +1,15 @@
+.forums-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 0;
+    background-image: url(../../../assets/images/background/bg-img02.jpg);
+}
+
+.forum-container {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.forum-header {
+    border-bottom: 1px solid black;
+}

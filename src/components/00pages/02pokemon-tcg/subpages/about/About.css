@@ -1,41 +1,38 @@
 .about-main {
-  margin: auto;
-  background-size: cover;
-  background-position: bottom;
-  font-size: larger;
+    margin: auto;
+    background-size: cover;
+    background-position: bottom;
+    font-size: larger;
 }
 
 .about-main-text-container {
-  padding: 2rem 0;
+    padding: 2rem 0;
 }
 
 .about-main * {
-  color: rgb(219, 255, 255);
-  text-align: center;
+    color: rgb(219, 255, 255);
+    text-align: center;
 }
 
 .about-main h2 {
-  margin: 1.5rem auto;
+    margin: 1.5rem auto;
 }
 
 .about-main p {
-  margin: 0 5rem;
-}
-
-.about-main a {
-  color: rgb(127, 194, 252);
+    margin: 0 5rem;
 }
 
 .about-tcg-link-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-tcg-link {
-  display: flex;
-  align-items: center;
-  padding: 0 2rem;
-  margin: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    margin: 0;
+    color: darkblue;
 }

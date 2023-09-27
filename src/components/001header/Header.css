@@ -7,6 +7,7 @@
         justify-content: space-between;
         position: relative;
         background-color: rrgb(250, 122, 122);
+        padding: 2rem 0;
     }
 
     .logo {
@@ -17,7 +18,7 @@
         position: fixed;
         top: 0;
         z-index: 2;
-        background-color: rgb(247, 44, 44);
+        background-color: #fad22f;
     }
 
     .logo:hover {
@@ -39,8 +40,8 @@
 
     .nav-button {
         position: fixed;
-        width: 40px;
-        height: 40px;
+        width: 70px;
+        height: 70px;
         right: 0;
         top: 0;
         z-index: 3;
@@ -87,7 +88,9 @@
     .main-header {
         background-color: rgb(247, 44, 44);
         justify-content: space-between;
-        position: static;
+        position: sticky;
+        top: 0;
+        z-index: 4;
         display: flex;
         padding: 0;
         height: 80px;
@@ -100,12 +103,13 @@
         width: 100%;
         justify-content: center;
         border: 2px solid black;
+        background-color: #fad22f;
 
         align-items: center;
     }
     .home-img {
         display: flex;
-        height: 40px;
+        height: 70px;
     }
 
     .nav {

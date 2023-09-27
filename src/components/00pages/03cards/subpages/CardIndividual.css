@@ -2,13 +2,35 @@
     width: 100%;
 }
 
+.individual-card-header {
+    background-color: rgb(114, 114, 255);
+}
+
+.individual-card-body {
+    background-image: url(../../../../assets/images/background/bg-img05.jpg);
+    background-size: cover;
+    background-position: bottom right;
+}
+
+.individual-card-text-container {
+    background-color: rgba(255, 255, 255, 0.5);
+    height: fit-content;
+    border-radius: 1rem;
+}
+
+.individual-card-text-container h4 {
+    border-bottom: 1px solid black;
+    padding-bottom: 0.5rem;
+}
+
 .card-individual-img {
-    width: 85vw;
+    height: 600px;
 }
 
 @media screen and (min-width: 769px) {
     .card-individual-img {
         width: auto;
         padding: 0 4rem;
+        height: 80vh;
     }
 }

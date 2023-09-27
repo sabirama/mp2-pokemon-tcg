@@ -1,20 +1,20 @@
-import Header from "./components/001header/Header";
-import routing from "./components/methods/routing";
-import mainroutes from "./components/00pages/mainrouter";
-import Footer from "./components/002footer/Footer";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
+import Header from './components/001header/Header'
+import routing from './components/methods/routing'
+import mainroutes from './components/00pages/mainrouter'
+import Footer from './components/002footer/Footer'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './App.css'
 
 const App = () => {
-  return (
-    <>
-      <Header />
+    return (
+        <>
+            <Header />
 
-      {routing(mainroutes)}
+            {routing(mainroutes)}
 
-      <Footer />
-    </>
-  );
-};
+            <Footer />
+        </>
+    )
+}
 
-export default App;
+export default App

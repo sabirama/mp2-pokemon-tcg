@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import request from '../../../../../lib/request'
+import request from '../../../../../lib/apirequest'
 import './CardSet.css'
 import SetsPage from './sets-page/SetsPage'
 

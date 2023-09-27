@@ -4,16 +4,9 @@
     text-align: center;
 }
 
-.tcg-main div {
-    display: flex;
-    margin: auto;
-    flex-direction: column;
-    align-items: center;
-    height: 50%;
-}
-
 .tcg-main div .mapped-list {
     flex-direction: column;
+    align-items: center;
 }
 
 .tcg-about-main h1 {

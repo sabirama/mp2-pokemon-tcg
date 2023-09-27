@@ -1,22 +1,40 @@
-import "./Footer.css";
+import './Footer.css'
 
 const Footer = () => {
-  return (
-    <footer className="main-footer">
-      <ul className="links-container">
-        Links
-        <li>Facebook</li>
-        <li>X</li>
-        <li>Discus</li>
-        <li>...</li>
-      </ul>
+    return (
+        <footer className="main-footer">
+            <ul className="links-container">
+                <h4>External Links</h4>
+                <li>
+                    <a
+                        href="https://www.pokemon.com/us/pokemon-news"
+                        className="external-link"
+                    >
+                        Latest Pokemon News
+                    </a>
+                </li>
+                <li>
+                    <a href="https://disqus.com/" className="external-link">
+                        Discussions
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://www.gamenerdz.com/pokemon"
+                        className="external-link"
+                    >
+                        Buy Latest Sets
+                    </a>
+                </li>
+            </ul>
 
-      <span className="copyright">
-        &copy; 2023, All rights reserved. This fanmade website is an independent
-        creation and is not affiliated with any company related to Pokemon.
-      </span>
-    </footer>
-  );
-};
+            <span className="copyright">
+                &copy; 2023, All rights reserved. This fanmade website is an
+                independent creation and is not affiliated with any company
+                related to Pokemon.
+            </span>
+        </footer>
+    )
+}
 
-export default Footer;
+export default Footer

@@ -1,4 +1,4 @@
-import request from '../../../../../lib/request'
+import request from '../../../../../lib/apirequest'
 import { useState, useEffect } from 'react'
 import splash from '../../../../../assets/images/splash.gif'
 import CardIndividual from '../CardIndividual'

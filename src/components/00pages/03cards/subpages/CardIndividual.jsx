@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 import Modal from 'react-bootstrap/Modal'
 import { useEffect, useState } from 'react'
-import request from '../../../../lib/request'
+import request from '../../../../lib/apirequest'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import './CardIndividual.css'
@@ -13,7 +13,6 @@ function IndividualCard(props) {
     async function getCard() {
         const { data } = await request.get(`/cards/?q=id:${props.toShow}`)
         setCard(data.data)
-        console.log(card)
     }
 
     useEffect(() => {
@@ -28,13 +27,16 @@ function IndividualCard(props) {
                     fullscreen={props.fullscreen}
                     onHide={() => props.setShow(false)}
                 >
-                    <Modal.Header closeButton>
+                    <Modal.Header
+                        closeButton
+                        className="individual-card-header"
+                    >
                         <Modal.Title>Card Details</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>
+                    <Modal.Body className="individual-card-body content-center d-flex justify-content-center">
                         <Container className="d-flex m-0">
                             <Row>
-                                <Col className="pb-5">
+                                <Col className="pb-5 d-flex justify-content-center">
                                     <img
                                         src={card[0].images.large}
                                         alt=""
@@ -42,7 +44,7 @@ function IndividualCard(props) {
                                     />
                                 </Col>
 
-                                <Col className="sm-12">
+                                <Col className="sm-12 px-5 individual-card-text-container">
                                     <h4 className="my-3">
                                         From: {card[0].set.name} set
                                     </h4>
@@ -68,7 +70,7 @@ function IndividualCard(props) {
                                             </h4>
                                             <h4 className="my-3">
                                                 Retreat Cost:{' '}
-                                                {String(card[0].retreatCost)} /
+                                                {String(card[0].retreatCost)}/
                                                 {card[0].convertedRetreatCost}
                                             </h4>
                                             <h4 className="my-3">Type:</h4>
@@ -152,7 +154,7 @@ function IndividualCard(props) {
                                         {card[0].hasOwnProperty('cardmarket') ==
                                         true ? (
                                             <Link to={card[0].cardmarket.url}>
-                                                <h4>
+                                                <h5>
                                                     <span>Cardmarket </span>
                                                     <span>
                                                         ( updated last:{' '}
@@ -162,14 +164,14 @@ function IndividualCard(props) {
                                                         }
                                                         )
                                                     </span>
-                                                </h4>
+                                                </h5>
                                             </Link>
                                         ) : null}
 
                                         {card[0].hasOwnProperty('tcgplayer') ==
                                         true ? (
                                             <Link to={card[0].tcgplayer.url}>
-                                                <h4>
+                                                <h5>
                                                     <span>Tcgplayer </span>
                                                     <span>
                                                         (updated last:{' '}
@@ -179,12 +181,14 @@ function IndividualCard(props) {
                                                         }
                                                         )
                                                     </span>
-                                                </h4>
+                                                </h5>
                                             </Link>
                                         ) : null}
+
+                                        <Link to="">Discussions</Link>
                                     </Container>
 
-                                    <h5>Artist: {card[0].artist}</h5>
+                                    <h4>Artist: {card[0].artist}</h4>
                                 </Col>
                             </Row>
                         </Container>

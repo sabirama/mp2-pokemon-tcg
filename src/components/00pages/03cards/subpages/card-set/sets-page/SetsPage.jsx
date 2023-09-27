@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react'
-import request from '../../../../../../lib/request'
+import request from '../../../../../../lib/apirequest'
 import { Button } from 'react-bootstrap'
 import CardIndividual from '../../CardIndividual'
 import splash from '../../../../../../assets/images/splash.gif'
@@ -46,7 +46,10 @@ const SetsPage = (props) => {
         <div className="sets-cards-display">
             {cards.length > 0 ? (
                 <div className="cards-display-header">
-                    <img src={cards[0].set.images.logo} alt="" />
+                    <img
+                        src={loading ? null : cards[0].set.images.logo}
+                        alt=""
+                    />
                 </div>
             ) : (
                 <h1>Select a set</h1>

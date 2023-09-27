@@ -1,6 +1,7 @@
 .cards-main {
     background-image: url(../../../assets/images/background/bg-img03.jpg);
-    padding-top: 70px;
+    background-position: center;
+    padding: 70px 0;
 }
 
 .cards-main .mapped-list {
@@ -50,8 +51,25 @@
     height: 345px;
 }
 
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.set-name {
+    text-align: right;
+}
+
+.card-detail {
+    display: flex;
+    justify-content: space-around;
+    height: 48px;
+}
+
 .card-item {
     padding: 1rem;
+    margin: 1rem;
     width: 260px;
     height: 450px;
 }

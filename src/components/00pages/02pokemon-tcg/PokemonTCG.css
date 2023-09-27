@@ -1,7 +1,7 @@
 .tcg-main {
-  margin: 0;
-  background-image: url(../../../assets/images/background/bg-img04.jpg);
-  background-size: cover;
-  background-position: bottom;
-  font-size: larger;
+    margin: 0;
+    background-image: url(../../../assets/images/background/bg-img04.jpg);
+    background-size: cover;
+    background-position: top;
+    font-size: larger;
 }

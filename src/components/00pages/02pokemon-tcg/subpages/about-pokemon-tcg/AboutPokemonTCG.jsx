@@ -7,7 +7,7 @@ import { Container } from 'react-bootstrap'
 const AboutPokemonTCG = () => {
     return (
         <main className="tcg-about-main">
-            <Container>
+            <Container className="m-auto">
                 <img
                     src={cherim}
                     alt=""
@@ -15,13 +15,13 @@ const AboutPokemonTCG = () => {
                     width="50%"
                 />
             </Container>
-            <Container>
+            <Container className="m-auto">
                 <h1>
                     Welcome, want to know about the Pokémon Trading Card Game
                     website?
                 </h1>
 
-                {mapping(tcgRoutes, 'Pokemon TCG')}
+                {mapping(tcgRoutes, 'PokeTCG Pulse')}
             </Container>
         </main>
     )
