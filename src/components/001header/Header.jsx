@@ -11,10 +11,20 @@ const Header = () => {
     const toggleActive = () => {
         setisActive(!isActive)
     }
+
+    const falseActive = () => {
+        setisActive(true)
+    }
+
     return (
         <header className="main-header">
             <Link to="/" className="logo">
-                <img src={pokemon} alt="" className="home-img" />
+                <img
+                    src={pokemon}
+                    alt=""
+                    className="home-img"
+                    onClick={falseActive}
+                />
             </Link>
 
             <nav className="nav">
@@ -28,7 +38,11 @@ const Header = () => {
                         }
                         return (
                             <li key={index}>
-                                <Link to={route.path} className="links">
+                                <Link
+                                    to={route.path}
+                                    className="links"
+                                    onClick={falseActive}
+                                >
                                     <img
                                         src={route.icon}
                                         alt=""
