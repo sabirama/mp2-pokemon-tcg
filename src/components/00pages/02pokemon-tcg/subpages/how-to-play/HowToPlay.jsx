@@ -1,10 +1,14 @@
 import './HowToPlay.css'
-import Guide from './guide/Guide'
+import HowToPlayRoutes from './howToPlayRoutes'
+import routing from '../../../../methods/routing'
+import mapping from '../../../../methods/mapping'
 
 const HowToPlay = () => {
     return (
         <main className="about-tcg-main">
-            <Guide />
+            {mapping(HowToPlayRoutes)}
+
+            {routing(HowToPlayRoutes)}
         </main>
     )
 }

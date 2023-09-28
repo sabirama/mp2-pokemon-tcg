@@ -1,9 +1,8 @@
-import { Container } from 'react-bootstrap'
-import Accordion from 'react-bootstrap/Accordion'
+import { Container, Accordion } from 'react-bootstrap'
 
 function Guide() {
     return (
-        <Container className="game-guide">
+        <Container className="py-5">
             <h3 className="text-center p-3">
                 Beginner`s Guide to Playing the Pokémon Trading Card Game (TCG)
             </h3>

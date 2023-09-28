@@ -15,7 +15,7 @@ const tcgRoutes = [
     },
     {
         name: 'How to play',
-        path: 'play',
+        path: 'play/*',
         element: <HowToPlay />,
     },
 ]
