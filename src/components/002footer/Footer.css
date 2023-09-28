@@ -1,5 +1,6 @@
 .main-footer * {
     color: white;
+    justify-content: center;
 }
 
 .main-footer {
@@ -10,11 +11,9 @@
 }
 
 .links-container {
-    width: 40%;
-    padding: 0 2rem;
-}
-.external-link {
-    margin-left: 1rem;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 2rem;
 }
 
 .external-link:hover {
@@ -30,5 +29,14 @@
 @media screen and (min-width: 769px) {
     .main-footer {
         display: flex;
+    }
+
+    .links-container {
+        text-align: left;
+        padding-bottom: 0;
+    }
+
+    .links-container li {
+        margin-left: 1rem;
     }
 }
