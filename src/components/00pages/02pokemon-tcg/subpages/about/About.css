@@ -3,6 +3,7 @@
     background-size: cover;
     background-position: bottom;
     font-size: larger;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .about-main-text-container {
