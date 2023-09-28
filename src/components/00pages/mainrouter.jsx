@@ -13,7 +13,7 @@ const mainroutes = [
     },
     {
         name: 'PokeTCG',
-        path: 'poketcg pulse/*',
+        path: 'poketcg-pulse/*',
         icon: tcgIcon,
         element: <PokemonTCG />,
     },
