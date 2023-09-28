@@ -14,6 +14,7 @@ const Forums = () => {
                         <a href={item.link}>
                             <h1 className="forum-header">{item.title}</h1>
                             <p>{item.body}</p>
+                            <p>{item.date}</p>
                         </a>
                     </Container>
                 )

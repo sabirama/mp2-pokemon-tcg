@@ -16,10 +16,7 @@ const AboutPokemonTCG = () => {
                 />
             </Container>
             <Container className="m-auto">
-                <h1>
-                    Welcome, want to know about the Pokémon Trading Card Game
-                    website?
-                </h1>
+                <h1>Learn about the Pokémon Trading Card Game.</h1>
 
                 {mapping(tcgRoutes, 'PokeTCG Pulse')}
             </Container>

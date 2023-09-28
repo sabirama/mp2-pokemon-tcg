@@ -8,6 +8,7 @@
         position: relative;
         background-color: rrgb(250, 122, 122);
         padding: 2rem 0;
+        background-color: #fad22f;
     }
 
     .logo {
@@ -18,7 +19,6 @@
         position: fixed;
         top: 0;
         z-index: 2;
-        background-color: #fad22f;
     }
 
     .logo:hover {
@@ -83,7 +83,7 @@
 
 @media screen and (min-width: 768px) {
     .main-header {
-        background-color: rgb(247, 44, 44);
+        background-color: #fad22f;
         justify-content: space-between;
         position: sticky;
         top: 0;
@@ -100,7 +100,6 @@
         width: 100%;
         justify-content: center;
         border: 2px solid black;
-        background-color: #fad22f;
         align-items: center;
     }
     .home-img {
@@ -137,10 +136,11 @@
     .links {
         display: flex;
         align-items: center;
+        text-align: center;
         padding: 0 2rem;
         height: 100%;
         border: 2px solid black;
-        color: white;
+        color: rgb(58, 45, 45);
     }
 
     .logo:hover,

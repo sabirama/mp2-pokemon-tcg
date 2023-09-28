@@ -67,6 +67,11 @@
         font-size: 4rem;
     }
 
+    .home-button-container .mapped-list {
+        justify-content: center;
+        margin: auto;
+    }
+
     .main-home .text-container p {
         text-align: center;
         margin: 3rem auto;
