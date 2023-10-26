@@ -1,22 +1,22 @@
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  margin: auto;
-  justify-content: center;
-  max-width: 1920px;
+    margin: auto;
+    justify-content: center;
+    max-width: 1920px;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 * {
-  color: black;
+    color: black;
 }

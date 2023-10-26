@@ -1,43 +1,54 @@
 .sets-main {
-  justify-content: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
 }
 
 .sets-display {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 250px;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.sets-cards-display {
+    width: calc(100% - 250px);
 }
 
 .set-symbol {
-  height: 40px;
+    height: 10px;
 }
 
 .set-logo {
-  height: 100px;
+    max-height: 20px;
+    max-width: 220px;
 }
 
 .set-image-container {
-  padding: 1rem;
-  border: 2px solid green;
-  position: relative;
+    padding: 1rem;
+    border: 2px solid green;
+    position: relative;
 }
 
 .set-image-container:hover {
-  background-color: gray;
-  border-radius: 5px solid gray;
+    background-color: gray;
+    border-radius: 5px solid gray;
 }
 .set-id {
-  background: none;
-  border: none;
-  cursor: default;
-  position: absolute;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  bottom: 0;
-  left: 0;
-  font-size: 0;
+    background: none;
+    border: none;
+    cursor: default;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    font-size: 0;
 }
 .set-id:focus {
-  outline: none;
+    outline: none;
 }

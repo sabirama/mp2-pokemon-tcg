@@ -1,4 +1,9 @@
 main {
-  margin: auto;
-  min-height: 700px;
+    margin: auto;
+    min-height: 700px;
+}
+.main-home,
+.tcg-main,
+.cards-main {
+    min-height: 90vh;
 }

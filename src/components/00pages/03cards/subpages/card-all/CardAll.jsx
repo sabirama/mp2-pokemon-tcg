@@ -181,12 +181,10 @@ const CardAll = () => {
                                             className="card-image"
                                         />
                                         <Button
-                                            variant="primary"
                                             onClick={handleShow}
                                             value={card.id}
-                                        >
-                                            Card Details
-                                        </Button>
+                                            className="show-button"
+                                        />
                                     </div>
                                 </span>
                             )

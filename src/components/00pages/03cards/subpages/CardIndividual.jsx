@@ -117,7 +117,7 @@ function IndividualCard(props) {
                                                                             {
                                                                                 item.type
                                                                             }
-                                                                            ,{' '}
+                                                                            ,
                                                                             {
                                                                                 item.value
                                                                             }
@@ -174,7 +174,7 @@ function IndividualCard(props) {
                                                 <h5>
                                                     <span>Tcgplayer </span>
                                                     <span>
-                                                        (updated last:{' '}
+                                                        (updated last:
                                                         {
                                                             card[0].tcgplayer
                                                                 .updatedAt

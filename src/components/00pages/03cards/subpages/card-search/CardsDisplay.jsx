@@ -46,7 +46,7 @@ function CardsDisplay(load, err, card, handleShow) {
                                                     className="card-image"
                                                 />
                                                 <Button
-                                                    variant="primary"
+                                                    variant="primary show-button"
                                                     onClick={handleShow}
                                                     value={card.id}
                                                 >

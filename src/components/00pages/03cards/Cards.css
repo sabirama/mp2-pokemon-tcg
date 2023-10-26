@@ -95,6 +95,15 @@
     border: 2px solid black;
 }
 
+.show-button {
+    background-color: transparent !important;
+    border: none !important;
+    background: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
 @keyframes hovercard {
     0% {
         box-shadow: 0 0 1px 8px rgba(255, 217, 0, 0.5);

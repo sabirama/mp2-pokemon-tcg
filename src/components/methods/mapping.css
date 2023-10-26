@@ -1,10 +1,11 @@
 .mapped-list {
-  display: flex;
-  padding: 0 2rem;
-  margin: 0;
+    display: flex;
+    padding: 0 2rem;
+    margin: 0;
 }
 
 .mapped-list li a {
-  background-color: rgb(115, 115, 255);
-  align-items: center;
+    background-color: rgb(255, 239, 239);
+    color: black;
+    align-items: center;
 }
