@@ -12,3 +12,7 @@
     justify-content: center;
     width: 50vw;
 }
+
+.page-text {
+    padding: 0 3rem;
+}

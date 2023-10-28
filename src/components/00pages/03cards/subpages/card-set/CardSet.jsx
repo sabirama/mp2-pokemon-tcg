@@ -16,10 +16,6 @@ const CardSet = () => {
         }
     }
 
-    const clickhandler = (e) => {
-        setId(e.target.value)
-    }
-
     useEffect(() => {})
 
     useEffect(() => {
@@ -48,7 +44,7 @@ const CardSet = () => {
                                         type="button"
                                         id={set.id}
                                         defaultValue={set.id}
-                                        onClick={clickhandler}
+                                        onClick={(e) => setId(e.target.value)}
                                         className="set-id"
                                     />
                                 </div>

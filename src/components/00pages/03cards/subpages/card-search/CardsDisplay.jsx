@@ -22,7 +22,9 @@ function CardsDisplay(load, err, card, handleShow) {
                     <p className="take-action-text">No card matches search.</p>
                 ) : (
                     <>
-                        <p>{card.length} items in this page</p>
+                        <p className="page-text">
+                            {card.length} items in this page
+                        </p>
                         <div className="cards-display">
                             <div className="card-container">
                                 {card.map((card, index) => {
