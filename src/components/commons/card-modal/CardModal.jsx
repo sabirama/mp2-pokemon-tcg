@@ -24,10 +24,10 @@ function CardModal({ card, show, setShow }) {
         </button>
       </header>
       <Row>
-        <Col className="col-md-7 col-lg-5 col-sm-12">
+        <Col className="col-lg-6 col-md-5 col-sm-12 d-flex justify-content-end">
           <img src={card?.images?.large} className="modal-card" />
         </Col>
-        <Col className="col-md-5 col-lg-6 col-sm-12 px-4">
+        <Col className="col-lg-6 col-md-7 col-sm-12 px-4">
           <div>
             <strong>Card Name</strong>: <small>{card?.name}</small>
           </div>

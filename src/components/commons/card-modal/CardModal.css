@@ -1,5 +1,6 @@
 .modal-card {
   height: 700px;
+  width: auto;
 }
 
 .modal-container {
@@ -41,9 +42,21 @@
 
 .modal-btn-close {
   position: fixed;
-  top: 56px;
+  top: 16px;
   right: 1rem;
   aspect-ratio: 1;
   height: 2rem;
   z-index: 50;
+}
+
+@media screen and (width < 1080px) {
+  .modal-card {
+    width: 40vw;
+  }
+}
+@media screen and (width < 720px) {
+  .modal-card {
+    width: 90%;
+    height: auto;
+  }
 }
