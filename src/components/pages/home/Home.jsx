@@ -24,7 +24,7 @@ function Home() {
         <p>View thousands of Pokemon TCG cards!</p>
 
         <div className="home-container">
-          <Link to="cards" className="cta-btn">
+          <Link to="/tcg" className="cta-btn">
             Card Library
           </Link>
         </div>
