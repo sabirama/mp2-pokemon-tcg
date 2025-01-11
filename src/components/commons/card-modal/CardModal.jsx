@@ -1,4 +1,4 @@
-import { Container,Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
@@ -23,11 +23,12 @@ function CardModal({ card, show, setShow }) {
           X
         </button>
       </header>
-      <Row>
-        <div className="col-lg-6 col-md-5 col-sm-6 d-flex justify-content-center">
+      <Row> 
+        <Col className="col-lg-6 col-md-8 col-sm-12 d-flex justify-content-end">
           <img src={card?.images?.large} className="modal-card" />
-        </div>
-        <div className="col-lg-6 col-md-7 col-sm-12 px-4">
+        </Col>
+
+        <Col className="col-lg-6 col-md-4 col-sm-12 px-4">
           <div>
             <strong>Card Name</strong>: <small>{card?.name}</small>
           </div>
@@ -43,6 +44,7 @@ function CardModal({ card, show, setShow }) {
           <div>
             <strong>Card Rarity</strong>: <small>{card?.rarity}</small>
           </div>
+
           <div>
             <strong>Card Set</strong>: <small>{card?.set?.name}</small>
           </div>
@@ -66,6 +68,7 @@ function CardModal({ card, show, setShow }) {
           <div>
             <strong>Artist</strong>: <small>{card?.artist}</small>
           </div>
+
           <div>
             <strong>Market</strong>
             <p>
@@ -75,60 +78,63 @@ function CardModal({ card, show, setShow }) {
               Card Market: <Link to={card?.cardmarket?.url}>{card?.cardmarket?.updatedAt || 'NA'}</Link>
             </p>
           </div>
-          
+
           <>
-        {card.supertype === 'Pokémon' ? (
-          <>
-            <div>
-              <strong>Pokemon Types</strong>: <small>{card?.types?.join(', ')}</small>
-            </div>
-            <div>
-              <strong>Weakness</strong>:{' '}
-              <small>
-                {card?.weaknesses?.map((weakness) => (
-                  <>
-                    {weakness?.type}({weakness?.value}),
-                  </>
-                ))}
-              </small>
-            </div>
-            <div>
-              <strong>Retreat Cost</strong>: <small>{card?.retreatCost?.join(', ')}</small>
-            </div>
-            <div>
-              <strong>Attacks</strong>
-              {card?.attacks?.map((attack, key) => (
-                <div key={key} className="px-4">
-                  <p>
-                    <em>{attack?.name}</em>
-                  </p>
-                  <p>
-                    <em> Cost:</em> <small>{attack?.cost?.join(', ')}</small>
-                  </p>
-                  <p>
-                    <em>damage:</em> <small>{attack?.damage}, </small>
-                  </p>
-                  <p>{attack?.text}</p>
+            {card.supertype === 'Pokémon' ? (
+              <>
+                <div>
+                  <strong>Pokemon Types</strong>: <small>{card?.types?.join(', ')}</small>
                 </div>
-              ))}
-            </div>
-            <div>
-              <strong>{card?.flavorText}</strong>
-            </div>
+
+                <div>
+                  <strong>Weakness</strong>:{' '}
+                  <small>
+                    {card?.weaknesses?.map((weakness) => (
+                      <>
+                        {weakness?.type}({weakness?.value}),
+                      </>
+                    ))}
+                  </small>
+                </div>
+
+                <div>
+                  <strong>Retreat Cost</strong>: <small>{card?.retreatCost?.join(', ')}</small>
+                </div>
+
+                <div>
+                  <strong>Attacks</strong>
+                  {card?.attacks?.map((attack, key) => (
+                    <div key={key} className="px-4">
+                      <p>
+                        <em>{attack?.name}</em>
+                      </p>
+                      <p>
+                        <em> Cost:</em> <small>{attack?.cost?.join(', ')}</small>
+                      </p>
+                      <p>
+                        <em>damage:</em> <small>{attack?.damage}, </small>
+                      </p>
+                      <p>{attack?.text}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div>
+                  <strong>{card?.flavorText}</strong>
+                </div>
+              </>
+            ) : card.supertype === 'Trainer' ? (
+              <>
+                <div>
+                  <strong>Rules</strong>:
+                  {card.rules.map((rule, key) => (
+                    <p key={key}>{rule}</p>
+                  ))}
+                </div>
+              </>
+            ) : null}
           </>
-        ) : card.supertype === 'Trainer' ? (
-          <>
-            <div>
-              <strong>Rules</strong>:
-              {card.rules.map((rule, key) => (
-                <p key={key}>{rule}</p>
-              ))}
-            </div>
-          </>
-        ) : null}
-      </>
-        </div>
-       
+        </Col>
       </Row>
     </Container>
   ) : null;
