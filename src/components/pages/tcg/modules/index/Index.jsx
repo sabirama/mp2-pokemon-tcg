@@ -39,7 +39,7 @@ function Index() {
         }}
         options={{
           name: 'order-set',
-          values: ['number', 'name', 'national-dex-number', 'card-set', 'hp', 'types'],
+          values: ['number', 'name', 'dex', 'set', 'hp', 'types'],
         }}
       />
 
