@@ -19,8 +19,9 @@ function Search() {
       const { data } = await request.get(`/cards/?q=name:"*${startSearch || 'pokemon'}*"&page=${page}&pageSize=50`);
       if (data) {
         setCards(data?.data);
+        console.log(data)
         setLoading(false);
-        if (data?.totalItemCount > 50) {
+        if (data?.totalCount > 50) {
           setHavePagination(true);
         } else {
           setHavePagination(false);
