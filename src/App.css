@@ -105,3 +105,14 @@ span.copyright {
   font-size: 16px;
   z-index: 50;
 }
+
+.dark-mode * .accordion-button,
+.dark-mode * button.accordion-button.collapsed,
+.dark-mode * .accordion-body {
+  background-color: var(--dark);
+  color: var(--cta-1);
+}
+
+.dark-mode * .accordion-button::after {
+  filter: brightness(10);
+}

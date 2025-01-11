@@ -60,6 +60,7 @@ function HowToPlay() {
               </ol>
             </Accordion.Body>
           </Accordion.Item>
+
           <Accordion.Item eventKey="1">
             <Accordion.Header>Game Setup</Accordion.Header>
             <Accordion.Body>
