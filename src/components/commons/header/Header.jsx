@@ -29,7 +29,7 @@ function Header({ theme, setTheme }) {
 }
 
 Header.propTypes = {
-  theme: PropTypes.bool.isRequired,
+  theme: PropTypes.string.isRequired,
   setTheme: PropTypes.func.isRequired,
 };
 

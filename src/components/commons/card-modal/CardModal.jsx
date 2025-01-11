@@ -1,8 +1,8 @@
-import { Col, Container, Row } from 'react-bootstrap';
+import { Container,Row } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import './CardModal.css';
 import { useEffect, useState } from 'react';
+import './CardModal.css';
 function CardModal({ card, show, setShow }) {
   const [classUpdate, setClassUpdate] = useState('');
 
@@ -24,10 +24,10 @@ function CardModal({ card, show, setShow }) {
         </button>
       </header>
       <Row>
-        <Col className="col-lg-6 col-md-5 col-sm-12 d-flex justify-content-end">
+        <div className="col-lg-6 col-md-5 col-sm-6 d-flex justify-content-center">
           <img src={card?.images?.large} className="modal-card" />
-        </Col>
-        <Col className="col-lg-6 col-md-7 col-sm-12 px-4">
+        </div>
+        <div className="col-lg-6 col-md-7 col-sm-12 px-4">
           <div>
             <strong>Card Name</strong>: <small>{card?.name}</small>
           </div>
@@ -127,7 +127,7 @@ function CardModal({ card, show, setShow }) {
           </>
         ) : null}
       </>
-        </Col>
+        </div>
        
       </Row>
     </Container>

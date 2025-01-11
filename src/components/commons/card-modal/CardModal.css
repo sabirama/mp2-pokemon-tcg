@@ -52,11 +52,12 @@
 @media screen and (width < 1080px) {
   .modal-card {
     width: 40vw;
+    height: auto;
   }
 }
 @media screen and (width < 720px) {
   .modal-card {
-    width: 90%;
-    height: auto;
+    width: 90% !important;
   }
 }
+
