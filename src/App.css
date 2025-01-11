@@ -5,10 +5,25 @@
 
 .card-container {
   width: 370px;
+  position: relative;
 }
 
-.card-image {
+.card-container::after {
+  content: 'click the card...';
+  width: 42.5%;
+  position: absolute;
+  color: var(--cta-1);
+  border: 2px solid var(--cta-1);
+  background-color: var(--bg-sub1);
+  padding: 0 1rem;
+  margin: 0 1rem;
+  bottom: 0;
+  left: 0;
+}
+
+.card-img {
   max-width: 300px;
+  box-shadow: 2px 2px 16px var(--cta-1);
 }
 
 .internal-links-container {
@@ -115,4 +130,21 @@ span.copyright {
 
 .dark-mode * .accordion-button::after {
   filter: brightness(10);
+}
+
+@media screen and (width < 480px) {
+  .card-container {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .card-container::after {
+    width: 90%;
+  }
+
+  img.card-img {
+    height: 180px !important;
+    width: auto;
+  }
 }

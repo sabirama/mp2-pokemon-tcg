@@ -4,6 +4,7 @@
   --cta-1: black;
   --external-links: rgb(11, 1, 104);
   --dark:rgb(43, 43, 43);
+  min-width: 480px;
 }
 
 .dark-mode {
