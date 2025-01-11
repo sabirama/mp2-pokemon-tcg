@@ -17,13 +17,12 @@ function Header({ theme, setTheme }) {
       <Link to={'/'} className="text-logo">
         POKEPULSE
       </Link>
-     
 
       <nav className="internal-links-container">
         <AddLinks mapLinks={MainRoutes} />
         <button onClick={updateTheme} className="theme-btn">
-        {theme === '' ? 'light' : 'dark'}
-      </button>
+          {theme === '' ? 'light' : 'dark'}
+        </button>
       </nav>
     </header>
   );
