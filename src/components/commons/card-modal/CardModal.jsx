@@ -23,12 +23,12 @@ function CardModal({ card, show, setShow }) {
           X
         </button>
       </header>
-      <Row> 
-        <Col className="col-lg-6 col-md-8 col-sm-12 d-flex justify-content-end">
+      <Row>
+        <Col className="col-lg-6 col-md-6 col-12 d-flex justify-content-end img-container">
           <img src={card?.images?.large} className="modal-card" />
         </Col>
 
-        <Col className="col-lg-6 col-md-4 col-sm-12 px-4">
+        <Col className="col-lg-6 col-md-6 col-12 px-4">
           <div>
             <strong>Card Name</strong>: <small>{card?.name}</small>
           </div>

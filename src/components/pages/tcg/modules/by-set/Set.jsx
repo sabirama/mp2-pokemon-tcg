@@ -11,12 +11,12 @@ function Set() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const scrollRef = useRef(null);
-
+  
   useEffect(() => {
     async function getSets() {
       const { data } = await request.get('/sets/?orderBy=set');
       if (data) {
-        setSets(data.data);
+        setSets(data?.data);
         setLoading(false);
       } else {
         setError('Failed fetching cards.');
@@ -49,11 +49,11 @@ function Set() {
   return (
     <Container className="d-flex flex-column gap-4">
       <div className="d-flex scroll" ref={scrollRef}>
-        {sets.map((set, index) => {
+        {sets?.map((set, index) => {
           return (
             <div key={index} className="set-link">
               <button onClick={() => setDisplaySet(set)} className="set-view-btn">
-                <img src={set.images.logo} alt="" className="set-logo" />
+                <img src={set?.images?.logo} alt="" className="set-logo" />
               </button>
             </div>
           );
@@ -71,12 +71,14 @@ function Set() {
           </div>
         ) : (
           <>
-            <div className="d-flex justify-content-center">
-              <img
-                src={displaySet?.images?.symbol || 'https://images.pokemontcg.io/base1/symbol.png'}
-                className="set-symbol"
-              />
-              <h3>{displaySet?.name?.toUpperCase() || 'BASE'}</h3>
+            <div className="d-flex flex-column align-items-center">
+              <span>
+                <img
+                  src={displaySet?.images?.symbol || 'https://images.pokemontcg.io/base1/symbol.png'}
+                  className="set-symbol"
+                />
+              </span>
+              <h1 className='set-name'>{displaySet?.name?.toUpperCase() || 'BASE'}</h1>
             </div>
             <SetCards setId={displaySet?.id || 'base1'} />
           </>

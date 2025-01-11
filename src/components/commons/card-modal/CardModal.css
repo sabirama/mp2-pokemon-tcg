@@ -1,6 +1,7 @@
 .modal-container {
   position: fixed;
   max-width: 100% !important;
+  min-height: 100vh !important;
   height: 100vh;
   background-color: var(--bg-sub1);
   transform: scale(0.5);
@@ -48,8 +49,17 @@
   z-index: 50;
 }
 
+.dark-mode * button.modal-btn-close {
+  background-color: var(--dark) !important;
+  border: 2px solid var(--cta-1);
+}
+
 @media screen and (width < 756px) {
   .modal-card {
     max-width: 90vw;
+  }
+
+  div.img-container {
+    justify-content: center !important;
   }
 }
