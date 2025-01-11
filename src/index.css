@@ -1,0 +1,72 @@
+:root {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  --bg-sub1: white;
+  --cta-1: black;
+  --external-links: rgb(11, 1, 104);
+  --dark:rgb(43, 43, 43);
+}
+
+.dark-mode {
+  background-color: var(--dark);
+  --bg-sub1: var(--dark);
+  --cta-1: white;
+  --external-links: rgb(166, 255, 251);
+}
+.dark-mode * p,
+.dark-mode * h1,
+.dark-mode * h2,
+.dark-mode * h3,
+.dark-mode * h4,
+.dark-mode * h5,
+.dark-mode * h6,
+.dark-mode * span,
+.dark-mode * strong,
+.dark-mode * small {
+  color: white;
+}
+
+button.theme-btn {
+ height: 24px;
+ color: var(--cta-1);
+ background: none;
+ border: none;
+ padding: 0 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-sub1);
+  z-index: 10;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  margin: 0;
+}
+
+main {
+  min-height: 65vh;
+  padding: 1rem;
+}
+
+footer {
+  display: grid;
+}

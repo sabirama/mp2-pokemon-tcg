@@ -1,0 +1,44 @@
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  bottom: 0;
+  background-color: var(--bg-sub1);
+  color: var(--cta-1);
+}
+
+.pagination-input-container {
+  display: flex;
+  padding-left: 1rem;
+}
+
+.pagination-input {
+  border: none;
+  background: none;
+  padding-left: 0.5rem;
+  width: 60px;
+  color: var(--cta-1);
+}
+
+/* Hide the spin buttons in Chrome, Safari, Edge, and Opera */
+.pagination-input::-webkit-outer-spin-button,
+.pagination-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} 
+
+.pagination-input:focus {
+  outline: none;
+}
+
+.pagination-label {
+  height: 100%;
+  display: grid;
+  place-content: center;
+}
+
+.pagination-nav-btn {
+  background: none;
+  border: none;
+  color: var(--cta-1);
+}

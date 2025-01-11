@@ -1,0 +1,107 @@
+.text-logo {
+  font-size: 24px;
+  font-weight: 1000;
+}
+
+.card-container {
+  width: 370px;
+}
+
+.card-image {
+  max-width: 300px;
+}
+
+.internal-links-container {
+  display: flex;
+  justify-content: flex-end;
+  position: sticky;
+  top: 36px;
+  z-index: 11;
+  background-color: var(--bg-sub1);
+}
+
+.internal-link {
+  padding: 0 0.5rem;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 30vw;
+  height: auto;
+}
+
+.cta-btn {
+  display: flex;
+  width: fit-content;
+  border-radius: 4px;
+  border: 2px solid var(--cta-1);
+  padding: 0.75rem 1.5rem;
+  margin: auto;
+  font-size: 24px;
+  font-weight: 1000;
+  color: var(--cta-1);
+}
+
+.home-container h1 {
+  text-align: center;
+  font-weight: 900;
+}
+
+.home-container {
+  padding: 2rem 1rem;
+}
+
+.home-container p {
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-size: 24px;
+}
+
+.external-links-container li {
+  padding: 0 1rem;
+}
+
+.external-links-container a {
+  color: var(--external-links);
+  font-weight: 500;
+}
+
+span.copyright {
+  text-align: center;
+  font-weight: 700;
+}
+
+#about div h1 {
+  text-align: center;
+  font-weight: 900;
+}
+
+#about div .alt-nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+  margin: auto;
+}
+
+#about div .alt-nav a {
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--cta-1);
+  padding: 1rem 2rem;
+  border: 2px solid var(--cta-1);
+}
+
+.to-top {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  opacity: 0.5;
+  height: 32px;
+  aspect-ratio: 1;
+  border: none;
+  font-size: 16px;
+  z-index: 50;
+}
