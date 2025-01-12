@@ -62,10 +62,6 @@ function CardModal({ card, show, setShow }) {
           </div>
 
           <div>
-            <strong>SET</strong>: <small>{card?.set?.name}</small>
-          </div>
-
-          <div>
             <strong>Artist</strong>: <small>{card?.artist}</small>
           </div>
 
